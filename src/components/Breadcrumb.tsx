@@ -3,6 +3,8 @@ import { Link, useLocation, useParams } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+import { formatSegmentName, formatTagName } from '@/utils/utils';
+
 interface BreadcrumbItem {
   label: string;
   path?: string;
@@ -96,21 +98,6 @@ const getBreadcrumbs = (
   return items;
 };
 
-const formatTagName = (tagName: string): string => {
-  // Remove angle brackets if present and capitalize
-  const cleanTag = tagName.replace(/[<>]/g, '');
-
-  return cleanTag.charAt(0).toUpperCase() + cleanTag.slice(1);
-};
-
-const formatSegmentName = (segment: string): string => {
-  // Convert kebab-case or snake_case to Title Case
-  return segment
-    .split(/[-_]/)
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-};
-
 export const Breadcrumb: React.FC = () => {
   const location = useLocation();
   const params = useParams();
@@ -128,8 +115,6 @@ export const Breadcrumb: React.FC = () => {
         <nav aria-label='Breadcrumb'>
           <ol className='flex items-center space-x-2'>
             {breadcrumbs.map((item, index) => {
-              const isLast = index === breadcrumbs.length - 1;
-
               return (
                 <React.Fragment key={index}>
                   {index > 0 && (
