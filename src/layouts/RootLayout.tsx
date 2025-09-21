@@ -1,8 +1,6 @@
 import { useLayoutEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 
-import { Breadcrumb } from '@/components/Breadcrumb';
-
 export function RootLayout() {
   const location = useLocation();
 

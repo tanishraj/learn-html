@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaCode, FaEye, FaPlay, FaExpand } from 'react-icons/fa';
+import { FaCode, FaEye, FaPlay } from 'react-icons/fa';
 
 interface TagCardProps {
   tag: {

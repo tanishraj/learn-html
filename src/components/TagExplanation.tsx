@@ -1,4 +1,4 @@
-import { useState, useEffect, useLayoutEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   FaBook,
@@ -11,16 +11,15 @@ import {
 } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
-import { tagDetails, TagDetail } from '../data/tagDetails';
+import { tagDetails } from '../data/tagDetails';
 
 import { Breadcrumb } from '@/components/Breadcrumb';
 
 interface TagExplanationProps {
   tagName: string;
-  onBack: () => void;
 }
 
-export const TagExplanation = ({ tagName, onBack }: TagExplanationProps) => {
+export const TagExplanation = ({ tagName }: TagExplanationProps) => {
   const navigate = useNavigate();
   const tagDetail = tagDetails[tagName] || tagDetails['h1'];
 
@@ -50,11 +49,11 @@ export const TagExplanation = ({ tagName, onBack }: TagExplanationProps) => {
   const handleTryLive = (code: string) => {
     // Store the code in sessionStorage to pass to playground
     sessionStorage.setItem('playgroundCode', code);
-    navigate(`/playground/${tagName}`);
+    void navigate(`/playground/${tagName}`);
   };
 
   const handleRelatedTagClick = (tag: string) => {
-    navigate(`/learn/${tag}`);
+    void navigate(`/learn/${tag}`);
   };
 
   return (

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaGraduationCap, FaBook, FaTrophy, FaCode } from 'react-icons/fa';
+import { FaGraduationCap, FaTrophy } from 'react-icons/fa';
 
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { usePageTitle } from '@/hooks/usePageTitle';

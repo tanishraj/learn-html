@@ -4,7 +4,6 @@ import Editor from '@monaco-editor/react';
 import {
   FaCode,
   FaPlay,
-  FaPause,
   FaSync,
   FaCopy,
   FaUndo,
@@ -20,7 +19,6 @@ import { Breadcrumb } from '@/components/Breadcrumb';
 
 interface TagPlaygroundProps {
   tagName: string;
-  onBack: () => void;
 }
 
 const themes = [
@@ -29,7 +27,7 @@ const themes = [
   { value: 'hc-black', label: 'High Contrast', icon: '⚡' },
 ];
 
-export const TagPlayground = ({ tagName, onBack }: TagPlaygroundProps) => {
+export const TagPlayground = ({ tagName }: TagPlaygroundProps) => {
   const navigate = useNavigate();
   const tagDetail = tagDetails[tagName] || tagDetails['h1'];
 
@@ -52,12 +50,6 @@ export const TagPlayground = ({ tagName, onBack }: TagPlaygroundProps) => {
   const [editorTheme, setEditorTheme] = useState('vs-dark');
   const [showThemeMenu, setShowThemeMenu] = useState(false);
   const [autoRun, setAutoRun] = useState(true);
-
-  useEffect(() => {
-    if (autoRun) {
-      updatePreview(code);
-    }
-  }, [code, autoRun]);
 
   const updatePreview = (htmlCode: string) => {
     const blob = new Blob(
@@ -179,8 +171,14 @@ export const TagPlayground = ({ tagName, onBack }: TagPlaygroundProps) => {
     setPreview(url);
   };
 
+  useEffect(() => {
+    if (autoRun) {
+      updatePreview(code);
+    }
+  }, [code, autoRun]);
+
   const copyCode = () => {
-    navigator.clipboard.writeText(code);
+    void navigator.clipboard.writeText(code);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -190,7 +188,7 @@ export const TagPlayground = ({ tagName, onBack }: TagPlaygroundProps) => {
   };
 
   const goToExplanation = () => {
-    navigate(`/learn/${tagName}`);
+    void navigate(`/learn/${tagName}`);
   };
 
   const handleEditorChange = (value: string | undefined) => {

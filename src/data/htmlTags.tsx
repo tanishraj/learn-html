@@ -277,10 +277,10 @@ export const htmlTags = [
     difficulty: 'basic' as const,
     preview: (
       <div className='text-center space-y-2'>
-        <a href='#' className='text-blue-400 hover:underline block'>
+        <a href='#section' className='text-blue-400 hover:underline block'>
           Visit our website
         </a>
-        <a href='#' className='text-purple-400 hover:underline block'>
+        <a href='#learn' className='text-purple-400 hover:underline block'>
           Learn more →
         </a>
       </div>
@@ -576,10 +576,10 @@ export const htmlTags = [
         <nav className='flex justify-between items-center'>
           <span className='text-white font-bold'>Logo</span>
           <div className='space-x-4'>
-            <a href='#' className='text-white'>
+            <a href='#home' className='text-white'>
               Home
             </a>
-            <a href='#' className='text-white'>
+            <a href='#about' className='text-white'>
               About
             </a>
           </div>
@@ -604,10 +604,10 @@ export const htmlTags = [
       <footer className='bg-gray-800 p-4 rounded text-center'>
         <p className='text-gray-400 text-sm'>© 2024 Your Website</p>
         <div className='flex justify-center gap-4 mt-2'>
-          <a href='#' className='text-blue-400 text-sm'>
+          <a href='#privacy' className='text-blue-400 text-sm'>
             Privacy
           </a>
-          <a href='#' className='text-blue-400 text-sm'>
+          <a href='#terms' className='text-blue-400 text-sm'>
             Terms
           </a>
         </div>
@@ -830,13 +830,13 @@ function hello() {
     difficulty: 'intermediate' as const,
     preview: (
       <nav className='flex gap-4 justify-center'>
-        <a href='#' className='text-blue-400 hover:underline'>
+        <a href='#home' className='text-blue-400 hover:underline'>
           Home
         </a>
-        <a href='#' className='text-blue-400 hover:underline'>
+        <a href='#products' className='text-blue-400 hover:underline'>
           Products
         </a>
-        <a href='#' className='text-blue-400 hover:underline'>
+        <a href='#contact' className='text-blue-400 hover:underline'>
           Contact
         </a>
       </nav>

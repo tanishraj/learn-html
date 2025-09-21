@@ -21,23 +21,21 @@ export const CodePlayground = ({
   const [currentHint, setCurrentHint] = useState(0);
   const [isCorrect, setIsCorrect] = useState(false);
 
-  useEffect(() => {
-    updatePreview(code);
-    checkSolution();
-  }, [code]);
-
   const updatePreview = (htmlCode: string) => {
     const blob = new Blob([htmlCode], { type: 'text/html' });
     const url = URL.createObjectURL(blob);
     setPreview(url);
   };
 
-  const checkSolution = () => {
+  useEffect(() => {
+    updatePreview(code);
+
+    // Check solution
     if (solution && code.trim() === solution.trim()) {
       setIsCorrect(true);
       onSuccess?.();
     }
-  };
+  }, [code, solution, onSuccess]);
 
   const handleHint = () => {
     setShowHint(true);

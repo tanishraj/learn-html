@@ -168,7 +168,7 @@ export const QuizCategory: React.FC<QuizCategoryProps> = ({ category }) => {
   };
 
   const resetQuiz = () => {
-    navigate('/quiz');
+    void navigate('/quiz');
   };
 
   const calculateScore = () => {

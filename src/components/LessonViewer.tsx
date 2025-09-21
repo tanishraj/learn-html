@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaArrowLeft, FaArrowRight, FaHome } from 'react-icons/fa';
 import Confetti from 'react-confetti';
 
-import { Lesson, Module } from '../types';
+import { Lesson } from '../types';
 import { CodePlayground } from './CodePlayground';
 
 interface LessonViewerProps {
@@ -18,9 +18,6 @@ export const LessonViewer = ({
   onBack,
 }: LessonViewerProps) => {
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
-  const [completedModules, setCompletedModules] = useState<Set<string>>(
-    new Set(),
-  );
   const [showConfetti, setShowConfetti] = useState(false);
 
   const currentModule = lesson.modules[currentModuleIndex];

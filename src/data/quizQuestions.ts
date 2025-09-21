@@ -1648,7 +1648,7 @@ export const quizQuestions: Question[] = [
             <div class="post-content">
               <span class="category">Tutorial</span>
               <h3>Getting Started with React</h3>
-              <p>A beginner\'s guide to React development...</p>
+              <p>A beginner's guide to React development...</p>
               <time>March 8, 2024</time>
             </div>
           </article>
@@ -1831,7 +1831,7 @@ export const quizQuestions: Question[] = [
         <label for="security-question">Security Question</label>
         <select id="security-question" name="security_question">
           <option value="">Select a question</option>
-          <option value="pet">What was your first pet\'s name?</option>
+          <option value="pet">What was your first pet's name?</option>
           <option value="school">What elementary school did you attend?</option>
           <option value="city">In what city were you born?</option>
         </select>
@@ -2025,7 +2025,7 @@ export const quizQuestions: Question[] = [
             <img src="starter2.jpg" alt="Soup of the Day">
             <div class="item-details">
               <h3>Soup of the Day</h3>
-              <p>Chef\'s daily selection with artisan bread</p>
+              <p>Chef's daily selection with artisan bread</p>
               <span class="price">$9</span>
             </div>
           </article>
@@ -2090,7 +2090,7 @@ export const quizQuestions: Question[] = [
         </article>
         <article class="testimonial">
           <div class="rating">★★★★★</div>
-          <p>"Chef Anderson\'s tasting menu was a journey through flavors. Simply unforgettable."</p>
+          <p>"Chef Anderson's tasting menu was a journey through flavors. Simply unforgettable."</p>
           <footer>
             <strong>Emily Chen</strong>
             <span>Food Blogger</span>
