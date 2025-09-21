@@ -6,10 +6,12 @@ export const htmlTags = [
     category: 'Structure',
     difficulty: 'basic' as const,
     preview: (
-      <div className="text-center">
-        <div className="border-2 border-dashed border-purple-500 p-4 rounded">
-          <span className="text-purple-400 font-mono text-sm">&lt;html&gt;</span>
-          <div className="mt-2 text-gray-400 text-xs">Root element</div>
+      <div className='text-center'>
+        <div className='border-2 border-dashed border-purple-500 p-4 rounded'>
+          <span className='text-purple-400 font-mono text-sm'>
+            &lt;html&gt;
+          </span>
+          <div className='mt-2 text-gray-400 text-xs'>Root element</div>
         </div>
       </div>
     ),
@@ -30,10 +32,12 @@ export const htmlTags = [
     category: 'Structure',
     difficulty: 'basic' as const,
     preview: (
-      <div className="text-center">
-        <div className="bg-gray-800 p-3 rounded">
-          <div className="text-blue-400 font-mono text-sm mb-1">&lt;head&gt;</div>
-          <div className="text-gray-500 text-xs space-y-1">
+      <div className='text-center'>
+        <div className='bg-gray-800 p-3 rounded'>
+          <div className='text-blue-400 font-mono text-sm mb-1'>
+            &lt;head&gt;
+          </div>
+          <div className='text-gray-500 text-xs space-y-1'>
             <div>• Title</div>
             <div>• Meta tags</div>
             <div>• Styles</div>
@@ -55,9 +59,11 @@ export const htmlTags = [
     category: 'Structure',
     difficulty: 'basic' as const,
     preview: (
-      <div className="border-2 border-green-500 border-dashed p-4 rounded">
-        <span className="text-green-400 font-bold">&lt;body&gt;</span>
-        <p className="text-gray-400 text-xs mt-2">All visible content goes here</p>
+      <div className='border-2 border-green-500 border-dashed p-4 rounded'>
+        <span className='text-green-400 font-bold'>&lt;body&gt;</span>
+        <p className='text-gray-400 text-xs mt-2'>
+          All visible content goes here
+        </p>
       </div>
     ),
     code: `<body>
@@ -74,13 +80,13 @@ export const htmlTags = [
     category: 'Metadata',
     difficulty: 'basic' as const,
     preview: (
-      <div className="text-center">
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 rounded-t-lg">
-          <div className="bg-white/10 backdrop-blur-sm rounded px-3 py-1">
-            <span className="text-white text-sm">🌐 My Website</span>
+      <div className='text-center'>
+        <div className='bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 rounded-t-lg'>
+          <div className='bg-white/10 backdrop-blur-sm rounded px-3 py-1'>
+            <span className='text-white text-sm'>🌐 My Website</span>
           </div>
         </div>
-        <div className="text-gray-500 text-xs mt-2">Browser tab</div>
+        <div className='text-gray-500 text-xs mt-2'>Browser tab</div>
       </div>
     ),
     code: `<head>
@@ -96,15 +102,17 @@ export const htmlTags = [
     category: 'Metadata',
     difficulty: 'intermediate' as const,
     preview: (
-      <div className="space-y-2 text-left">
-        <div className="bg-gray-800 p-2 rounded">
-          <span className="text-purple-400 font-mono text-xs">charset="UTF-8"</span>
+      <div className='space-y-2 text-left'>
+        <div className='bg-gray-800 p-2 rounded'>
+          <span className='text-purple-400 font-mono text-xs'>
+            charset="UTF-8"
+          </span>
         </div>
-        <div className="bg-gray-800 p-2 rounded">
-          <span className="text-purple-400 font-mono text-xs">viewport</span>
+        <div className='bg-gray-800 p-2 rounded'>
+          <span className='text-purple-400 font-mono text-xs'>viewport</span>
         </div>
-        <div className="bg-gray-800 p-2 rounded">
-          <span className="text-purple-400 font-mono text-xs">description</span>
+        <div className='bg-gray-800 p-2 rounded'>
+          <span className='text-purple-400 font-mono text-xs'>description</span>
         </div>
       </div>
     ),
@@ -121,14 +129,14 @@ export const htmlTags = [
     category: 'Resources',
     difficulty: 'intermediate' as const,
     preview: (
-      <div className="space-y-2">
-        <div className="flex items-center gap-2 text-cyan-400">
-          <span className="text-2xl">🎨</span>
-          <span className="text-sm">Stylesheet</span>
+      <div className='space-y-2'>
+        <div className='flex items-center gap-2 text-cyan-400'>
+          <span className='text-2xl'>🎨</span>
+          <span className='text-sm'>Stylesheet</span>
         </div>
-        <div className="flex items-center gap-2 text-yellow-400">
-          <span className="text-2xl">⭐</span>
-          <span className="text-sm">Favicon</span>
+        <div className='flex items-center gap-2 text-yellow-400'>
+          <span className='text-2xl'>⭐</span>
+          <span className='text-sm'>Favicon</span>
         </div>
       </div>
     ),
@@ -144,10 +152,10 @@ export const htmlTags = [
     category: 'Resources',
     difficulty: 'intermediate' as const,
     preview: (
-      <div className="bg-gradient-to-br from-yellow-500 to-orange-500 p-4 rounded">
-        <div className="text-white font-mono text-sm">
+      <div className='bg-gradient-to-br from-yellow-500 to-orange-500 p-4 rounded'>
+        <div className='text-white font-mono text-sm'>
           <div>{'<script>'}</div>
-          <div className="pl-2">alert('Hi!');</div>
+          <div className='pl-2'>alert('Hi!');</div>
           <div>{'</script>'}</div>
         </div>
       </div>
@@ -166,12 +174,12 @@ export const htmlTags = [
     category: 'Resources',
     difficulty: 'intermediate' as const,
     preview: (
-      <div className="bg-gradient-to-br from-pink-500 to-purple-500 p-3 rounded">
-        <div className="text-white font-mono text-xs">
+      <div className='bg-gradient-to-br from-pink-500 to-purple-500 p-3 rounded'>
+        <div className='text-white font-mono text-xs'>
           <div>{'<style>'}</div>
-          <div className="pl-2">.text {'{'}</div>
-          <div className="pl-4">color: blue;</div>
-          <div className="pl-2">{'}'}</div>
+          <div className='pl-2'>.text {'{'}</div>
+          <div className='pl-4'>color: blue;</div>
+          <div className='pl-2'>{'}'}</div>
           <div>{'</style>'}</div>
         </div>
       </div>
@@ -192,8 +200,8 @@ export const htmlTags = [
     category: 'Text',
     difficulty: 'basic' as const,
     preview: (
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white">Main Title</h1>
+      <div className='text-center'>
+        <h1 className='text-4xl font-bold text-white'>Main Title</h1>
       </div>
     ),
     code: `<h1>Main Title</h1>
@@ -209,7 +217,10 @@ export const htmlTags = [
     difficulty: 'basic' as const,
     preview: (
       <div>
-        <p className="text-gray-300">This is a paragraph of text. It contains regular content that you want to display on your webpage.</p>
+        <p className='text-gray-300'>
+          This is a paragraph of text. It contains regular content that you want
+          to display on your webpage.
+        </p>
       </div>
     ),
     code: `<p>
@@ -224,9 +235,13 @@ export const htmlTags = [
     category: 'Interactive',
     difficulty: 'basic' as const,
     preview: (
-      <div className="flex gap-2 justify-center">
-        <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Click Me!</button>
-        <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">Submit</button>
+      <div className='flex gap-2 justify-center'>
+        <button className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600'>
+          Click Me!
+        </button>
+        <button className='px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600'>
+          Submit
+        </button>
       </div>
     ),
     code: `<button>Click Me!</button>
@@ -241,9 +256,9 @@ export const htmlTags = [
     category: 'Media',
     difficulty: 'basic' as const,
     preview: (
-      <div className="flex justify-center">
-        <div className="w-32 h-32 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center">
-          <span className="text-white text-4xl">🖼️</span>
+      <div className='flex justify-center'>
+        <div className='w-32 h-32 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center'>
+          <span className='text-white text-4xl'>🖼️</span>
         </div>
       </div>
     ),
@@ -261,9 +276,13 @@ export const htmlTags = [
     category: 'Navigation',
     difficulty: 'basic' as const,
     preview: (
-      <div className="text-center space-y-2">
-        <a href="#" className="text-blue-400 hover:underline block">Visit our website</a>
-        <a href="#" className="text-purple-400 hover:underline block">Learn more →</a>
+      <div className='text-center space-y-2'>
+        <a href='#' className='text-blue-400 hover:underline block'>
+          Visit our website
+        </a>
+        <a href='#' className='text-purple-400 hover:underline block'>
+          Learn more →
+        </a>
       </div>
     ),
     code: `<a href="https://example.com">
@@ -279,8 +298,8 @@ export const htmlTags = [
     category: 'Lists',
     difficulty: 'basic' as const,
     preview: (
-      <div className="w-full">
-        <ul className="text-gray-300 list-disc list-inside space-y-1 text-left block">
+      <div className='w-full'>
+        <ul className='text-gray-300 list-disc list-inside space-y-1 text-left block'>
           <li>First item</li>
           <li>Second item</li>
           <li>Third item</li>
@@ -300,8 +319,8 @@ export const htmlTags = [
     category: 'Lists',
     difficulty: 'basic' as const,
     preview: (
-      <div className="w-full">
-        <ol className="text-gray-300 list-decimal list-inside space-y-1 text-left block">
+      <div className='w-full'>
+        <ol className='text-gray-300 list-decimal list-inside space-y-1 text-left block'>
           <li>First step</li>
           <li>Second step</li>
           <li>Third step</li>
@@ -321,21 +340,21 @@ export const htmlTags = [
     category: 'Data',
     difficulty: 'intermediate' as const,
     preview: (
-      <table className="w-full text-sm text-gray-300">
+      <table className='w-full text-sm text-gray-300'>
         <thead>
-          <tr className="border-b border-gray-600">
-            <th className="text-left p-1">Name</th>
-            <th className="text-left p-1">Age</th>
+          <tr className='border-b border-gray-600'>
+            <th className='text-left p-1'>Name</th>
+            <th className='text-left p-1'>Age</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td className="p-1">John</td>
-            <td className="p-1">25</td>
+            <td className='p-1'>John</td>
+            <td className='p-1'>25</td>
           </tr>
           <tr>
-            <td className="p-1">Jane</td>
-            <td className="p-1">30</td>
+            <td className='p-1'>Jane</td>
+            <td className='p-1'>30</td>
           </tr>
         </tbody>
       </table>
@@ -362,18 +381,18 @@ export const htmlTags = [
     category: 'Forms',
     difficulty: 'intermediate' as const,
     preview: (
-      <form className="space-y-2">
-        <input 
-          type="text" 
-          placeholder="Your name" 
-          className="w-full px-3 py-1 bg-gray-700 rounded text-white text-sm"
+      <form className='space-y-2'>
+        <input
+          type='text'
+          placeholder='Your name'
+          className='w-full px-3 py-1 bg-gray-700 rounded text-white text-sm'
         />
-        <input 
-          type="email" 
-          placeholder="Email" 
-          className="w-full px-3 py-1 bg-gray-700 rounded text-white text-sm"
+        <input
+          type='email'
+          placeholder='Email'
+          className='w-full px-3 py-1 bg-gray-700 rounded text-white text-sm'
         />
-        <button className="px-4 py-1 bg-purple-500 text-white rounded text-sm">
+        <button className='px-4 py-1 bg-purple-500 text-white rounded text-sm'>
           Submit
         </button>
       </form>
@@ -396,12 +415,12 @@ export const htmlTags = [
     category: 'Structure',
     difficulty: 'basic' as const,
     preview: (
-      <div className="border-2 border-dashed border-gray-600 p-4 rounded">
-        <div className="bg-blue-500/20 p-2 rounded mb-2">
-          <span className="text-blue-400 text-sm">Section 1</span>
+      <div className='border-2 border-dashed border-gray-600 p-4 rounded'>
+        <div className='bg-blue-500/20 p-2 rounded mb-2'>
+          <span className='text-blue-400 text-sm'>Section 1</span>
         </div>
-        <div className="bg-purple-500/20 p-2 rounded">
-          <span className="text-purple-400 text-sm">Section 2</span>
+        <div className='bg-purple-500/20 p-2 rounded'>
+          <span className='text-purple-400 text-sm'>Section 2</span>
         </div>
       </div>
     ),
@@ -421,9 +440,9 @@ export const htmlTags = [
     category: 'Media',
     difficulty: 'intermediate' as const,
     preview: (
-      <div className="flex justify-center">
-        <div className="w-full h-24 bg-gradient-to-br from-red-500 to-pink-500 rounded-lg flex items-center justify-center">
-          <span className="text-white text-3xl">▶️</span>
+      <div className='flex justify-center'>
+        <div className='w-full h-24 bg-gradient-to-br from-red-500 to-pink-500 rounded-lg flex items-center justify-center'>
+          <span className='text-white text-3xl'>▶️</span>
         </div>
       </div>
     ),
@@ -441,9 +460,9 @@ export const htmlTags = [
     category: 'Graphics',
     difficulty: 'advanced' as const,
     preview: (
-      <div className="flex justify-center">
-        <div className="w-32 h-32 bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center animate-pulse">
-          <span className="text-white text-2xl">🎨</span>
+      <div className='flex justify-center'>
+        <div className='w-32 h-32 bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center animate-pulse'>
+          <span className='text-white text-2xl'>🎨</span>
         </div>
       </div>
     ),
@@ -465,10 +484,10 @@ export const htmlTags = [
     category: 'Media',
     difficulty: 'intermediate' as const,
     preview: (
-      <div className="flex justify-center">
-        <div className="px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center gap-2">
-          <span className="text-white">🎵</span>
-          <span className="text-white text-sm">Play Audio</span>
+      <div className='flex justify-center'>
+        <div className='px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center gap-2'>
+          <span className='text-white'>🎵</span>
+          <span className='text-white text-sm'>Play Audio</span>
         </div>
       </div>
     ),
@@ -486,9 +505,17 @@ export const htmlTags = [
     category: 'Forms',
     difficulty: 'basic' as const,
     preview: (
-      <div className="space-y-2">
-        <input type="text" placeholder="Enter your name" className="w-full px-3 py-1 bg-gray-700 rounded text-white" />
-        <input type="password" placeholder="Password" className="w-full px-3 py-1 bg-gray-700 rounded text-white" />
+      <div className='space-y-2'>
+        <input
+          type='text'
+          placeholder='Enter your name'
+          className='w-full px-3 py-1 bg-gray-700 rounded text-white'
+        />
+        <input
+          type='password'
+          placeholder='Password'
+          className='w-full px-3 py-1 bg-gray-700 rounded text-white'
+        />
       </div>
     ),
     code: `<input type="text" 
@@ -507,7 +534,7 @@ export const htmlTags = [
     category: 'Forms',
     difficulty: 'intermediate' as const,
     preview: (
-      <select className="w-full px-3 py-2 bg-gray-700 text-white rounded">
+      <select className='w-full px-3 py-2 bg-gray-700 text-white rounded'>
         <option>Choose an option</option>
         <option>Option 1</option>
         <option>Option 2</option>
@@ -527,9 +554,9 @@ export const htmlTags = [
     category: 'Forms',
     difficulty: 'basic' as const,
     preview: (
-      <textarea 
-        placeholder="Write your message here..." 
-        className="w-full h-20 px-3 py-2 bg-gray-700 text-white rounded resize-none"
+      <textarea
+        placeholder='Write your message here...'
+        className='w-full h-20 px-3 py-2 bg-gray-700 text-white rounded resize-none'
       />
     ),
     code: `<textarea 
@@ -545,12 +572,16 @@ export const htmlTags = [
     category: 'Structure',
     difficulty: 'basic' as const,
     preview: (
-      <header className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 rounded">
-        <nav className="flex justify-between items-center">
-          <span className="text-white font-bold">Logo</span>
-          <div className="space-x-4">
-            <a href="#" className="text-white">Home</a>
-            <a href="#" className="text-white">About</a>
+      <header className='bg-gradient-to-r from-blue-600 to-purple-600 p-4 rounded'>
+        <nav className='flex justify-between items-center'>
+          <span className='text-white font-bold'>Logo</span>
+          <div className='space-x-4'>
+            <a href='#' className='text-white'>
+              Home
+            </a>
+            <a href='#' className='text-white'>
+              About
+            </a>
           </div>
         </nav>
       </header>
@@ -570,11 +601,15 @@ export const htmlTags = [
     category: 'Structure',
     difficulty: 'basic' as const,
     preview: (
-      <footer className="bg-gray-800 p-4 rounded text-center">
-        <p className="text-gray-400 text-sm">© 2024 Your Website</p>
-        <div className="flex justify-center gap-4 mt-2">
-          <a href="#" className="text-blue-400 text-sm">Privacy</a>
-          <a href="#" className="text-blue-400 text-sm">Terms</a>
+      <footer className='bg-gray-800 p-4 rounded text-center'>
+        <p className='text-gray-400 text-sm'>© 2024 Your Website</p>
+        <div className='flex justify-center gap-4 mt-2'>
+          <a href='#' className='text-blue-400 text-sm'>
+            Privacy
+          </a>
+          <a href='#' className='text-blue-400 text-sm'>
+            Terms
+          </a>
         </div>
       </footer>
     ),
@@ -591,9 +626,11 @@ export const htmlTags = [
     category: 'Structure',
     difficulty: 'basic' as const,
     preview: (
-      <section className="border-2 border-dashed border-blue-500 p-4 rounded">
-        <h2 className="text-blue-400 font-bold mb-2">Section Title</h2>
-        <p className="text-gray-300 text-sm">This is a section containing related content.</p>
+      <section className='border-2 border-dashed border-blue-500 p-4 rounded'>
+        <h2 className='text-blue-400 font-bold mb-2'>Section Title</h2>
+        <p className='text-gray-300 text-sm'>
+          This is a section containing related content.
+        </p>
       </section>
     ),
     code: `<section>
@@ -608,10 +645,12 @@ export const htmlTags = [
     category: 'Structure',
     difficulty: 'intermediate' as const,
     preview: (
-      <article className="bg-gray-800 p-4 rounded">
-        <h3 className="text-yellow-400 font-bold">Article Title</h3>
-        <p className="text-gray-400 text-xs mt-1">By Author • 5 min read</p>
-        <p className="text-gray-300 mt-2 text-sm">Article content goes here...</p>
+      <article className='bg-gray-800 p-4 rounded'>
+        <h3 className='text-yellow-400 font-bold'>Article Title</h3>
+        <p className='text-gray-400 text-xs mt-1'>By Author • 5 min read</p>
+        <p className='text-gray-300 mt-2 text-sm'>
+          Article content goes here...
+        </p>
       </article>
     ),
     code: `<article>
@@ -627,9 +666,10 @@ export const htmlTags = [
     category: 'Text',
     difficulty: 'basic' as const,
     preview: (
-      <p className="text-gray-300">
-        This is <span className="text-cyan-400 font-bold">highlighted</span> text 
-        with <span className="text-purple-400 underline">different</span> styles.
+      <p className='text-gray-300'>
+        This is <span className='text-cyan-400 font-bold'>highlighted</span>{' '}
+        text with <span className='text-purple-400 underline'>different</span>{' '}
+        styles.
       </p>
     ),
     code: `<p>
@@ -647,8 +687,9 @@ export const htmlTags = [
     category: 'Text',
     difficulty: 'basic' as const,
     preview: (
-      <p className="text-gray-300">
-        This is <strong className="text-white font-bold">very important</strong> text!
+      <p className='text-gray-300'>
+        This is <strong className='text-white font-bold'>very important</strong>{' '}
+        text!
       </p>
     ),
     code: `<p>
@@ -664,8 +705,9 @@ export const htmlTags = [
     category: 'Text',
     difficulty: 'basic' as const,
     preview: (
-      <p className="text-gray-300">
-        This text has <em className="italic text-yellow-400">emphasis</em> on certain words.
+      <p className='text-gray-300'>
+        This text has <em className='italic text-yellow-400'>emphasis</em> on
+        certain words.
       </p>
     ),
     code: `<p>
@@ -681,9 +723,11 @@ export const htmlTags = [
     category: 'Text',
     difficulty: 'basic' as const,
     preview: (
-      <p className="text-gray-300">
-        First line<br />
-        Second line<br />
+      <p className='text-gray-300'>
+        First line
+        <br />
+        Second line
+        <br />
         Third line
       </p>
     ),
@@ -699,9 +743,9 @@ Third line`,
     difficulty: 'basic' as const,
     preview: (
       <div>
-        <p className="text-gray-300 mb-2">Content above</p>
-        <hr className="border-gray-600" />
-        <p className="text-gray-300 mt-2">Content below</p>
+        <p className='text-gray-300 mb-2'>Content above</p>
+        <hr className='border-gray-600' />
+        <p className='text-gray-300 mt-2'>Content below</p>
       </div>
     ),
     code: `<p>Content above</p>
@@ -715,7 +759,7 @@ Third line`,
     category: 'Text',
     difficulty: 'intermediate' as const,
     preview: (
-      <blockquote className="border-l-4 border-cyan-500 pl-4 italic text-gray-400">
+      <blockquote className='border-l-4 border-cyan-500 pl-4 italic text-gray-400'>
         "This is an inspirational quote from someone famous."
       </blockquote>
     ),
@@ -731,8 +775,12 @@ Third line`,
     category: 'Text',
     difficulty: 'intermediate' as const,
     preview: (
-      <p className="text-gray-300">
-        Use <code className="bg-gray-700 px-2 py-1 rounded text-green-400 font-mono text-sm">console.log()</code> to debug.
+      <p className='text-gray-300'>
+        Use{' '}
+        <code className='bg-gray-700 px-2 py-1 rounded text-green-400 font-mono text-sm'>
+          console.log()
+        </code>{' '}
+        to debug.
       </p>
     ),
     code: `<p>
@@ -747,7 +795,7 @@ Third line`,
     category: 'Text',
     difficulty: 'intermediate' as const,
     preview: (
-      <pre className="bg-gray-900 p-2 rounded text-green-400 font-mono text-xs overflow-x-auto">{`function hello() {
+      <pre className='bg-gray-900 p-2 rounded text-green-400 font-mono text-xs overflow-x-auto'>{`function hello() {
   console.log("Hi!");
 }`}</pre>
     ),
@@ -764,8 +812,8 @@ function hello() {
     category: 'Media',
     difficulty: 'advanced' as const,
     preview: (
-      <div className="bg-gradient-to-br from-gray-700 to-gray-800 h-24 rounded flex items-center justify-center">
-        <span className="text-gray-400">External Content Frame</span>
+      <div className='bg-gradient-to-br from-gray-700 to-gray-800 h-24 rounded flex items-center justify-center'>
+        <span className='text-gray-400'>External Content Frame</span>
       </div>
     ),
     code: `<iframe 
@@ -781,10 +829,16 @@ function hello() {
     category: 'Structure',
     difficulty: 'intermediate' as const,
     preview: (
-      <nav className="flex gap-4 justify-center">
-        <a href="#" className="text-blue-400 hover:underline">Home</a>
-        <a href="#" className="text-blue-400 hover:underline">Products</a>
-        <a href="#" className="text-blue-400 hover:underline">Contact</a>
+      <nav className='flex gap-4 justify-center'>
+        <a href='#' className='text-blue-400 hover:underline'>
+          Home
+        </a>
+        <a href='#' className='text-blue-400 hover:underline'>
+          Products
+        </a>
+        <a href='#' className='text-blue-400 hover:underline'>
+          Contact
+        </a>
       </nav>
     ),
     code: `<nav>
@@ -800,9 +854,11 @@ function hello() {
     category: 'Structure',
     difficulty: 'intermediate' as const,
     preview: (
-      <div className="border-2 border-green-500 border-dashed p-4 rounded">
-        <span className="text-green-400 font-bold">MAIN CONTENT AREA</span>
-        <p className="text-gray-400 text-sm mt-2">Your primary content goes here</p>
+      <div className='border-2 border-green-500 border-dashed p-4 rounded'>
+        <span className='text-green-400 font-bold'>MAIN CONTENT AREA</span>
+        <p className='text-gray-400 text-sm mt-2'>
+          Your primary content goes here
+        </p>
       </div>
     ),
     code: `<main>

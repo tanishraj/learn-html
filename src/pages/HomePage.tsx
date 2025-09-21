@@ -10,6 +10,7 @@ import {
   FaArrowRight,
   FaClipboardCheck,
 } from 'react-icons/fa';
+
 import { usePageTitle } from '@/hooks/usePageTitle';
 
 export const HomePage = () => {

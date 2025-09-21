@@ -20,7 +20,8 @@ export const lessons: Lesson[] = [
         id: 'first-html',
         title: 'Your First HTML',
         type: 'demo',
-        content: 'Let\'s write your first HTML! It\'s as easy as writing "Hello" on a piece of paper.',
+        content:
+          'Let\'s write your first HTML! It\'s as easy as writing "Hello" on a piece of paper.',
         code: `<!DOCTYPE html>
 <html>
   <head>
@@ -49,7 +50,10 @@ export const lessons: Lesson[] = [
     <h1>Hello, [Your Name]!</h1>
   </body>
 </html>`,
-        hints: ['Change the text between <h1> and </h1>', 'Replace "World" with your name'],
+        hints: [
+          'Change the text between <h1> and </h1>',
+          'Replace "World" with your name',
+        ],
       },
     ],
   },
@@ -103,7 +107,7 @@ export const lessons: Lesson[] = [
         id: 'image-demo',
         title: 'Adding Your First Image',
         type: 'demo',
-        content: 'Here\'s how to add an image:',
+        content: "Here's how to add an image:",
         code: `<h1>My Photo Album</h1>
 <img src="https://via.placeholder.com/300x200" alt="A beautiful sunset">
 <p>This is a photo I took last summer!</p>`,
@@ -129,7 +133,7 @@ export const lessons: Lesson[] = [
         id: 'list-demo',
         title: 'Creating Lists',
         type: 'demo',
-        content: 'Let\'s make both types of lists:',
+        content: "Let's make both types of lists:",
         code: `<h2>My Shopping List</h2>
 <ul>
   <li>Apples</li>
@@ -166,7 +170,7 @@ export const lessons: Lesson[] = [
         id: 'link-demo',
         title: 'Creating Your First Link',
         type: 'demo',
-        content: 'Here\'s how links work:',
+        content: "Here's how links work:",
         code: `<h1>My Favorite Websites</h1>
 <p>Click below to visit:</p>
 <a href="https://www.google.com">Visit Google</a>

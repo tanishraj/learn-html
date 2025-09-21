@@ -10,6 +10,7 @@ import {
   RotateCcw,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+
 import { quizQuestions, Question } from '@/data/quizQuestions';
 import { Breadcrumb } from '@/components/Breadcrumb';
 
@@ -28,14 +29,18 @@ export const QuizCategory: React.FC<QuizCategoryProps> = ({ category }) => {
   const navigate = useNavigate();
   const [filteredQuestions, setFilteredQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [userAnswers, setUserAnswers] = useState<Record<string, UserAnswer>>({});
+  const [userAnswers, setUserAnswers] = useState<Record<string, UserAnswer>>(
+    {},
+  );
   const [selectedAnswer, setSelectedAnswer] = useState<string | string[]>('');
   const [showResults, setShowResults] = useState(false);
   const [startTime, setStartTime] = useState(Date.now());
   const [questionStartTime, setQuestionStartTime] = useState(Date.now());
   const [totalTime, setTotalTime] = useState(0);
   const [showExplanation, setShowExplanation] = useState(false);
-  const [shuffledOptions, setShuffledOptions] = useState<Record<string, string[]>>({});
+  const [shuffledOptions, setShuffledOptions] = useState<
+    Record<string, string[]>
+  >({});
 
   // Shuffle array function
   const shuffleArray = <T,>(array: T[]): T[] => {
@@ -44,6 +49,7 @@ export const QuizCategory: React.FC<QuizCategoryProps> = ({ category }) => {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
+
     return shuffled;
   };
 
@@ -54,7 +60,7 @@ export const QuizCategory: React.FC<QuizCategoryProps> = ({ category }) => {
     } else {
       questions = quizQuestions.filter(q => q.category === category);
     }
-    
+
     // Shuffle options for each question that has options
     const optionsMap: Record<string, string[]> = {};
     questions.forEach(question => {
@@ -63,7 +69,7 @@ export const QuizCategory: React.FC<QuizCategoryProps> = ({ category }) => {
       }
     });
     setShuffledOptions(optionsMap);
-    
+
     setFilteredQuestions(questions);
     setStartTime(Date.now());
     setQuestionStartTime(Date.now());
@@ -85,12 +91,15 @@ export const QuizCategory: React.FC<QuizCategoryProps> = ({ category }) => {
 
   const currentQuestion = filteredQuestions[currentQuestionIndex];
   const totalQuestions = filteredQuestions.length;
-  const progressPercentage = ((currentQuestionIndex + 1) / totalQuestions) * 100;
+  const progressPercentage =
+    ((currentQuestionIndex + 1) / totalQuestions) * 100;
   const isAnswered = userAnswers[currentQuestion.id] !== undefined;
 
   const handleSelectAnswer = (answer: string) => {
     if (currentQuestion.type === 'multiple-choice') {
-      const currentAnswers = Array.isArray(selectedAnswer) ? selectedAnswer : [];
+      const currentAnswers = Array.isArray(selectedAnswer)
+        ? selectedAnswer
+        : [];
       if (currentAnswers.includes(answer)) {
         setSelectedAnswer(currentAnswers.filter(a => a !== answer));
       } else {
@@ -105,12 +114,26 @@ export const QuizCategory: React.FC<QuizCategoryProps> = ({ category }) => {
     const timeSpent = Date.now() - questionStartTime;
     let isCorrect = false;
 
-    if (Array.isArray(currentQuestion.correctAnswer) && Array.isArray(selectedAnswer)) {
-      isCorrect = currentQuestion.correctAnswer.length === selectedAnswer.length &&
-        currentQuestion.correctAnswer.every(ans => selectedAnswer.includes(ans));
-    } else if (typeof currentQuestion.correctAnswer === 'string' && typeof selectedAnswer === 'string') {
-      if (currentQuestion.type === 'code-completion' || currentQuestion.type === 'practical') {
-        isCorrect = selectedAnswer.trim().toLowerCase() === currentQuestion.correctAnswer.trim().toLowerCase();
+    if (
+      Array.isArray(currentQuestion.correctAnswer) &&
+      Array.isArray(selectedAnswer)
+    ) {
+      isCorrect =
+        currentQuestion.correctAnswer.length === selectedAnswer.length &&
+        currentQuestion.correctAnswer.every(ans =>
+          selectedAnswer.includes(ans),
+        );
+    } else if (
+      typeof currentQuestion.correctAnswer === 'string' &&
+      typeof selectedAnswer === 'string'
+    ) {
+      if (
+        currentQuestion.type === 'code-completion' ||
+        currentQuestion.type === 'practical'
+      ) {
+        isCorrect =
+          selectedAnswer.trim().toLowerCase() ===
+          currentQuestion.correctAnswer.trim().toLowerCase();
       } else {
         isCorrect = selectedAnswer === currentQuestion.correctAnswer;
       }
@@ -149,8 +172,11 @@ export const QuizCategory: React.FC<QuizCategoryProps> = ({ category }) => {
   };
 
   const calculateScore = () => {
-    const correctAnswers = filteredQuestions.filter(q => userAnswers[q.id]?.isCorrect).length;
+    const correctAnswers = filteredQuestions.filter(
+      q => userAnswers[q.id]?.isCorrect,
+    ).length;
     const percentage = (correctAnswers / totalQuestions) * 100;
+
     return { correctAnswers, percentage };
   };
 
@@ -170,14 +196,15 @@ export const QuizCategory: React.FC<QuizCategoryProps> = ({ category }) => {
 
   const getCategoryName = () => {
     const categoryNames: Record<string, string> = {
-      'all': 'All Questions',
-      'objective': 'Objective',
-      'attributes': 'HTML Attributes',
+      all: 'All Questions',
+      objective: 'Objective',
+      attributes: 'HTML Attributes',
       'complete-code': 'Complete Code',
       'practical-easy': 'Easy Practical',
       'practical-medium': 'Medium Practical',
       'practical-hard': 'Hard Practical',
     };
+
     return categoryNames[category] || category;
   };
 
@@ -361,7 +388,10 @@ export const QuizCategory: React.FC<QuizCategoryProps> = ({ category }) => {
                 currentQuestion.type === 'multiple-choice') &&
               currentQuestion.options ? (
                 <div className='space-y-3'>
-                  {(shuffledOptions[currentQuestion.id] || currentQuestion.options).map((option, index) => (
+                  {(
+                    shuffledOptions[currentQuestion.id] ||
+                    currentQuestion.options
+                  ).map((option, index) => (
                     <label
                       key={index}
                       className={`flex items-center p-4 rounded-xl cursor-pointer transition-all border ${
@@ -397,7 +427,9 @@ export const QuizCategory: React.FC<QuizCategoryProps> = ({ category }) => {
                 </div>
               ) : (
                 <textarea
-                  value={typeof selectedAnswer === 'string' ? selectedAnswer : ''}
+                  value={
+                    typeof selectedAnswer === 'string' ? selectedAnswer : ''
+                  }
                   onChange={e => setSelectedAnswer(e.target.value)}
                   disabled={isAnswered}
                   placeholder='Type your answer here...'
@@ -455,9 +487,15 @@ export const QuizCategory: React.FC<QuizCategoryProps> = ({ category }) => {
               {!isAnswered ? (
                 <button
                   onClick={handleSubmitAnswer}
-                  disabled={!selectedAnswer || (Array.isArray(selectedAnswer) && selectedAnswer.length === 0)}
+                  disabled={
+                    !selectedAnswer ||
+                    (Array.isArray(selectedAnswer) &&
+                      selectedAnswer.length === 0)
+                  }
                   className={`px-6 py-3 rounded-lg font-medium ${
-                    !selectedAnswer || (Array.isArray(selectedAnswer) && selectedAnswer.length === 0)
+                    !selectedAnswer ||
+                    (Array.isArray(selectedAnswer) &&
+                      selectedAnswer.length === 0)
                       ? 'bg-gray-800 text-gray-600 cursor-not-allowed'
                       : 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:opacity-90'
                   } transition-opacity`}

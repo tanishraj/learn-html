@@ -1,7 +1,18 @@
 export interface Question {
   id: string;
-  category: 'objective' | 'attributes' | 'complete-code' | 'practical-easy' | 'practical-medium' | 'practical-hard';
-  type: 'single-choice' | 'multiple-choice' | 'fill-blank' | 'code-completion' | 'practical';
+  category:
+    | 'objective'
+    | 'attributes'
+    | 'complete-code'
+    | 'practical-easy'
+    | 'practical-medium'
+    | 'practical-hard';
+  type:
+    | 'single-choice'
+    | 'multiple-choice'
+    | 'fill-blank'
+    | 'code-completion'
+    | 'practical';
   question: string;
   code?: string;
   options?: string[];
@@ -22,10 +33,11 @@ export const quizQuestions: Question[] = [
       'Hyper Text Markup Language',
       'High Tech Modern Language',
       'Home Tool Markup Language',
-      'Hyperlinks and Text Markup Language'
+      'Hyperlinks and Text Markup Language',
     ],
     correctAnswer: 'Hyper Text Markup Language',
-    explanation: 'HTML stands for HyperText Markup Language, which is the standard markup language for creating web pages.'
+    explanation:
+      'HTML stands for HyperText Markup Language, which is the standard markup language for creating web pages.',
   },
   {
     id: 'obj-2',
@@ -35,7 +47,8 @@ export const quizQuestions: Question[] = [
     question: 'Which HTML element is used to define the title of a document?',
     options: ['<title>', '<head>', '<meta>', '<header>'],
     correctAnswer: '<title>',
-    explanation: 'The <title> element defines the title of the document, shown in the browser\'s title bar or page tab.'
+    explanation:
+      "The <title> element defines the title of the document, shown in the browser's title bar or page tab.",
   },
   {
     id: 'obj-3',
@@ -45,7 +58,8 @@ export const quizQuestions: Question[] = [
     question: 'Which HTML element is used for the largest heading?',
     options: ['<h1>', '<h6>', '<heading>', '<head>'],
     correctAnswer: '<h1>',
-    explanation: 'The <h1> element represents the largest heading, with headings ranging from <h1> to <h6>.'
+    explanation:
+      'The <h1> element represents the largest heading, with headings ranging from <h1> to <h6>.',
   },
   {
     id: 'obj-4',
@@ -55,7 +69,8 @@ export const quizQuestions: Question[] = [
     question: 'What is the correct HTML element for inserting a line break?',
     options: ['<br>', '<break>', '<lb>', '<newline>'],
     correctAnswer: '<br>',
-    explanation: 'The <br> element produces a line break in text (carriage-return).'
+    explanation:
+      'The <br> element produces a line break in text (carriage-return).',
   },
   {
     id: 'obj-5',
@@ -65,7 +80,8 @@ export const quizQuestions: Question[] = [
     question: 'Which character is used to indicate an end tag?',
     options: ['/', '*', '<', '^'],
     correctAnswer: '/',
-    explanation: 'The forward slash (/) is used in closing tags, like </p> or </div>.'
+    explanation:
+      'The forward slash (/) is used in closing tags, like </p> or </div>.',
   },
   {
     id: 'obj-6',
@@ -75,7 +91,7 @@ export const quizQuestions: Question[] = [
     question: 'Which HTML element defines the root of an HTML document?',
     options: ['<html>', '<root>', '<body>', '<head>'],
     correctAnswer: '<html>',
-    explanation: 'The <html> element is the root element of an HTML page.'
+    explanation: 'The <html> element is the root element of an HTML page.',
   },
   {
     id: 'obj-7',
@@ -87,10 +103,11 @@ export const quizQuestions: Question[] = [
       '<a href="url">link text</a>',
       '<link>url</link>',
       '<hyperlink>url</hyperlink>',
-      '<url>link text</url>'
+      '<url>link text</url>',
     ],
     correctAnswer: '<a href="url">link text</a>',
-    explanation: 'The <a> element with href attribute creates hyperlinks in HTML.'
+    explanation:
+      'The <a> element with href attribute creates hyperlinks in HTML.',
   },
   {
     id: 'obj-8',
@@ -100,7 +117,7 @@ export const quizQuestions: Question[] = [
     question: 'Which HTML element is used to define an unordered list?',
     options: ['<ul>', '<ol>', '<list>', '<li>'],
     correctAnswer: '<ul>',
-    explanation: 'The <ul> element defines an unordered (bulleted) list.'
+    explanation: 'The <ul> element defines an unordered (bulleted) list.',
   },
   {
     id: 'obj-9',
@@ -112,20 +129,22 @@ export const quizQuestions: Question[] = [
       '<!DOCTYPE html>',
       '<!DOCTYPE HTML5>',
       '<!DOCTYPE html PUBLIC>',
-      '<doctype html>'
+      '<doctype html>',
     ],
     correctAnswer: '<!DOCTYPE html>',
-    explanation: 'HTML5 uses the simple declaration <!DOCTYPE html>.'
+    explanation: 'HTML5 uses the simple declaration <!DOCTYPE html>.',
   },
   {
     id: 'obj-10',
     category: 'objective',
     type: 'single-choice',
     difficulty: 'medium',
-    question: 'Which HTML element is used to specify a footer for a document or section?',
+    question:
+      'Which HTML element is used to specify a footer for a document or section?',
     options: ['<footer>', '<bottom>', '<section>', '<foot>'],
     correctAnswer: '<footer>',
-    explanation: 'The <footer> element defines a footer for a document or section.'
+    explanation:
+      'The <footer> element defines a footer for a document or section.',
   },
   {
     id: 'obj-11',
@@ -135,7 +154,8 @@ export const quizQuestions: Question[] = [
     question: 'Which input type defines a slider control in HTML5?',
     options: ['range', 'slider', 'scroll', 'control'],
     correctAnswer: 'range',
-    explanation: 'The input type="range" creates a slider control for selecting a value from a range.'
+    explanation:
+      'The input type="range" creates a slider control for selecting a value from a range.',
   },
   {
     id: 'obj-12',
@@ -145,7 +165,7 @@ export const quizQuestions: Question[] = [
     question: 'What is the correct HTML element for playing video files?',
     options: ['<video>', '<movie>', '<media>', '<film>'],
     correctAnswer: '<video>',
-    explanation: 'The <video> element is used to embed video content in HTML5.'
+    explanation: 'The <video> element is used to embed video content in HTML5.',
   },
   {
     id: 'obj-13',
@@ -155,7 +175,7 @@ export const quizQuestions: Question[] = [
     question: 'Which HTML element defines navigation links?',
     options: ['<nav>', '<navigate>', '<navigation>', '<menu>'],
     correctAnswer: '<nav>',
-    explanation: 'The <nav> element defines a set of navigation links.'
+    explanation: 'The <nav> element defines a set of navigation links.',
   },
   {
     id: 'obj-14',
@@ -165,7 +185,8 @@ export const quizQuestions: Question[] = [
     question: 'Which element is used to define a description list?',
     options: ['<dl>', '<dd>', '<dt>', '<desc>'],
     correctAnswer: '<dl>',
-    explanation: 'The <dl> element defines a description list, with <dt> for terms and <dd> for descriptions.'
+    explanation:
+      'The <dl> element defines a description list, with <dt> for terms and <dd> for descriptions.',
   },
   {
     id: 'obj-15',
@@ -177,20 +198,23 @@ export const quizQuestions: Question[] = [
       '<textarea>',
       '<input type="textarea">',
       '<input type="text">',
-      '<textbox>'
+      '<textbox>',
     ],
     correctAnswer: '<textarea>',
-    explanation: 'The <textarea> element defines a multi-line text input control.'
+    explanation:
+      'The <textarea> element defines a multi-line text input control.',
   },
   {
     id: 'obj-16',
     category: 'objective',
     type: 'single-choice',
     difficulty: 'easy',
-    question: 'Which HTML element is used to display a scalar measurement within a range?',
+    question:
+      'Which HTML element is used to display a scalar measurement within a range?',
     options: ['<meter>', '<measure>', '<gauge>', '<range>'],
     correctAnswer: '<meter>',
-    explanation: 'The <meter> element represents a scalar value within a known range.'
+    explanation:
+      'The <meter> element represents a scalar value within a known range.',
   },
   {
     id: 'obj-17',
@@ -200,7 +224,8 @@ export const quizQuestions: Question[] = [
     question: 'Which element is used to define important text?',
     options: ['<strong>', '<important>', '<b>', '<i>'],
     correctAnswer: '<strong>',
-    explanation: 'The <strong> element defines text with strong importance, typically displayed as bold.'
+    explanation:
+      'The <strong> element defines text with strong importance, typically displayed as bold.',
   },
   {
     id: 'obj-18',
@@ -210,7 +235,8 @@ export const quizQuestions: Question[] = [
     question: 'Which HTML5 element is used to define self-contained content?',
     options: ['<article>', '<section>', '<aside>', '<content>'],
     correctAnswer: '<article>',
-    explanation: 'The <article> element specifies independent, self-contained content.'
+    explanation:
+      'The <article> element specifies independent, self-contained content.',
   },
   {
     id: 'obj-19',
@@ -222,10 +248,10 @@ export const quizQuestions: Question[] = [
       '<input type="checkbox">',
       '<checkbox>',
       '<check>',
-      '<input type="check">'
+      '<input type="check">',
     ],
     correctAnswer: '<input type="checkbox">',
-    explanation: 'The input element with type="checkbox" creates a checkbox.'
+    explanation: 'The input element with type="checkbox" creates a checkbox.',
   },
   {
     id: 'obj-20',
@@ -235,27 +261,30 @@ export const quizQuestions: Question[] = [
     question: 'Which HTML element is used to define a table row?',
     options: ['<tr>', '<td>', '<table>', '<th>'],
     correctAnswer: '<tr>',
-    explanation: 'The <tr> element defines a row in an HTML table.'
+    explanation: 'The <tr> element defines a row in an HTML table.',
   },
   {
     id: 'obj-21',
     category: 'objective',
     type: 'single-choice',
     difficulty: 'hard',
-    question: 'Which element is used to define a container for an external application?',
+    question:
+      'Which element is used to define a container for an external application?',
     options: ['<embed>', '<object>', '<iframe>', '<applet>'],
     correctAnswer: '<embed>',
-    explanation: 'The <embed> element is used as a container for external applications or interactive content.'
+    explanation:
+      'The <embed> element is used as a container for external applications or interactive content.',
   },
   {
     id: 'obj-22',
     category: 'objective',
     type: 'single-choice',
     difficulty: 'medium',
-    question: 'What is the correct HTML element for defining a definition term?',
+    question:
+      'What is the correct HTML element for defining a definition term?',
     options: ['<dt>', '<dd>', '<dl>', '<dfn>'],
     correctAnswer: '<dt>',
-    explanation: 'The <dt> element defines a term in a description list.'
+    explanation: 'The <dt> element defines a term in a description list.',
   },
   {
     id: 'obj-23',
@@ -265,7 +294,8 @@ export const quizQuestions: Question[] = [
     question: 'Which HTML element is used to define emphasized text?',
     options: ['<em>', '<i>', '<italic>', '<emphasis>'],
     correctAnswer: '<em>',
-    explanation: 'The <em> element defines emphasized text, typically displayed as italic.'
+    explanation:
+      'The <em> element defines emphasized text, typically displayed as italic.',
   },
   {
     id: 'obj-24',
@@ -275,7 +305,8 @@ export const quizQuestions: Question[] = [
     question: 'Which HTML5 element is used to show the progress of a task?',
     options: ['<progress>', '<meter>', '<status>', '<loading>'],
     correctAnswer: '<progress>',
-    explanation: 'The <progress> element represents the completion progress of a task.'
+    explanation:
+      'The <progress> element represents the completion progress of a task.',
   },
   {
     id: 'obj-25',
@@ -285,7 +316,8 @@ export const quizQuestions: Question[] = [
     question: 'Which element defines a clickable area inside an image map?',
     options: ['<area>', '<map>', '<region>', '<zone>'],
     correctAnswer: '<area>',
-    explanation: 'The <area> element defines clickable areas within an image map.'
+    explanation:
+      'The <area> element defines clickable areas within an image map.',
   },
 
   // 25 HTML Attributes Questions
@@ -297,27 +329,32 @@ export const quizQuestions: Question[] = [
     question: 'Which attribute specifies the URL of the page the link goes to?',
     options: ['href', 'src', 'link', 'url'],
     correctAnswer: 'href',
-    explanation: 'The href attribute specifies the URL of the page the link goes to.'
+    explanation:
+      'The href attribute specifies the URL of the page the link goes to.',
   },
   {
     id: 'attr-2',
     category: 'attributes',
     type: 'single-choice',
     difficulty: 'easy',
-    question: 'Which attribute is used to provide an alternate text for an image?',
+    question:
+      'Which attribute is used to provide an alternate text for an image?',
     options: ['alt', 'title', 'text', 'description'],
     correctAnswer: 'alt',
-    explanation: 'The alt attribute provides alternative text for an image if it cannot be displayed.'
+    explanation:
+      'The alt attribute provides alternative text for an image if it cannot be displayed.',
   },
   {
     id: 'attr-3',
     category: 'attributes',
     type: 'single-choice',
     difficulty: 'medium',
-    question: 'Which attribute specifies that an input field must be filled out before submitting?',
+    question:
+      'Which attribute specifies that an input field must be filled out before submitting?',
     options: ['required', 'mandatory', 'validate', 'must'],
     correctAnswer: 'required',
-    explanation: 'The required attribute specifies that an input field must be filled out before submitting the form.'
+    explanation:
+      'The required attribute specifies that an input field must be filled out before submitting the form.',
   },
   {
     id: 'attr-4',
@@ -327,7 +364,8 @@ export const quizQuestions: Question[] = [
     question: 'Which attribute is used to specify the width of an image?',
     options: ['width', 'size', 'w', 'length'],
     correctAnswer: 'width',
-    explanation: 'The width attribute specifies the width of an element, like an image.'
+    explanation:
+      'The width attribute specifies the width of an element, like an image.',
   },
   {
     id: 'attr-5',
@@ -337,27 +375,32 @@ export const quizQuestions: Question[] = [
     question: 'Which attribute specifies where to open the linked document?',
     options: ['target', 'window', 'open', 'location'],
     correctAnswer: 'target',
-    explanation: 'The target attribute specifies where to open the linked document (e.g., _blank for new window).'
+    explanation:
+      'The target attribute specifies where to open the linked document (e.g., _blank for new window).',
   },
   {
     id: 'attr-6',
     category: 'attributes',
     type: 'single-choice',
     difficulty: 'easy',
-    question: 'Which attribute provides a unique identifier for an HTML element?',
+    question:
+      'Which attribute provides a unique identifier for an HTML element?',
     options: ['id', 'name', 'key', 'identifier'],
     correctAnswer: 'id',
-    explanation: 'The id attribute provides a unique identifier for an HTML element.'
+    explanation:
+      'The id attribute provides a unique identifier for an HTML element.',
   },
   {
     id: 'attr-7',
     category: 'attributes',
     type: 'single-choice',
     difficulty: 'medium',
-    question: 'Which attribute is used to specify the character encoding for the HTML document?',
+    question:
+      'Which attribute is used to specify the character encoding for the HTML document?',
     options: ['charset', 'encoding', 'char', 'code'],
     correctAnswer: 'charset',
-    explanation: 'The charset attribute specifies the character encoding for the HTML document.'
+    explanation:
+      'The charset attribute specifies the character encoding for the HTML document.',
   },
   {
     id: 'attr-8',
@@ -367,67 +410,80 @@ export const quizQuestions: Question[] = [
     question: 'Which attribute makes an input field read-only?',
     options: ['readonly', 'disabled', 'locked', 'fixed'],
     correctAnswer: 'readonly',
-    explanation: 'The readonly attribute makes an input field read-only (cannot be modified).'
+    explanation:
+      'The readonly attribute makes an input field read-only (cannot be modified).',
   },
   {
     id: 'attr-9',
     category: 'attributes',
     type: 'single-choice',
     difficulty: 'medium',
-    question: 'Which attribute specifies the maximum number of characters allowed in an input?',
+    question:
+      'Which attribute specifies the maximum number of characters allowed in an input?',
     options: ['maxlength', 'max', 'limit', 'size'],
     correctAnswer: 'maxlength',
-    explanation: 'The maxlength attribute specifies the maximum number of characters allowed in an input field.'
+    explanation:
+      'The maxlength attribute specifies the maximum number of characters allowed in an input field.',
   },
   {
     id: 'attr-10',
     category: 'attributes',
     type: 'single-choice',
     difficulty: 'easy',
-    question: 'Which attribute is used to group related options in a dropdown list?',
+    question:
+      'Which attribute is used to group related options in a dropdown list?',
     options: ['optgroup', 'group', 'category', 'section'],
     correctAnswer: 'optgroup',
-    explanation: 'The optgroup element groups related options in a dropdown list.'
+    explanation:
+      'The optgroup element groups related options in a dropdown list.',
   },
   {
     id: 'attr-11',
     category: 'attributes',
     type: 'single-choice',
     difficulty: 'hard',
-    question: 'Which attribute specifies a regular expression pattern for input validation?',
+    question:
+      'Which attribute specifies a regular expression pattern for input validation?',
     options: ['pattern', 'regex', 'validate', 'format'],
     correctAnswer: 'pattern',
-    explanation: 'The pattern attribute specifies a regular expression that the input value is checked against.'
+    explanation:
+      'The pattern attribute specifies a regular expression that the input value is checked against.',
   },
   {
     id: 'attr-12',
     category: 'attributes',
     type: 'single-choice',
     difficulty: 'medium',
-    question: 'Which attribute provides a hint about the expected value of an input field?',
+    question:
+      'Which attribute provides a hint about the expected value of an input field?',
     options: ['placeholder', 'hint', 'tip', 'example'],
     correctAnswer: 'placeholder',
-    explanation: 'The placeholder attribute provides a short hint describing the expected value of an input field.'
+    explanation:
+      'The placeholder attribute provides a short hint describing the expected value of an input field.',
   },
   {
     id: 'attr-13',
     category: 'attributes',
     type: 'single-choice',
     difficulty: 'easy',
-    question: 'Which attribute is used to specify multiple values for the <input> element?',
+    question:
+      'Which attribute is used to specify multiple values for the <input> element?',
     options: ['multiple', 'many', 'multi', 'several'],
     correctAnswer: 'multiple',
-    explanation: 'The multiple attribute allows users to enter/select more than one value.'
+    explanation:
+      'The multiple attribute allows users to enter/select more than one value.',
   },
   {
     id: 'attr-14',
     category: 'attributes',
     type: 'single-choice',
     difficulty: 'hard',
-    question: 'Which attribute enables spell checking for input fields and textareas?',
+    question:
+      'Which attribute enables spell checking for input fields and textareas?',
     options: ['spellcheck', 'spell', 'check', 'autocorrect'],
     correctAnswer: 'spellcheck',
-    explanation: 'The spellcheck attribute specifies whether spell checking is enabled for an element.'
+    explanation:
+      'The spellcheck attribute specifies whether spell checking is enabled for an element.',
   },
   {
     id: 'attr-15',
@@ -437,17 +493,20 @@ export const quizQuestions: Question[] = [
     question: 'Which attribute specifies the visible width of a text input?',
     options: ['size', 'width', 'cols', 'length'],
     correctAnswer: 'size',
-    explanation: 'The size attribute specifies the visible width, in characters, of an input field.'
+    explanation:
+      'The size attribute specifies the visible width, in characters, of an input field.',
   },
   {
     id: 'attr-16',
     category: 'attributes',
     type: 'single-choice',
     difficulty: 'hard',
-    question: 'Which attribute allows a form element to be associated with multiple forms?',
+    question:
+      'Which attribute allows a form element to be associated with multiple forms?',
     options: ['form', 'formid', 'parent', 'belongs'],
     correctAnswer: 'form',
-    explanation: 'The form attribute allows form elements to be associated with a form by its id.'
+    explanation:
+      'The form attribute allows form elements to be associated with a form by its id.',
   },
   {
     id: 'attr-17',
@@ -457,7 +516,8 @@ export const quizQuestions: Question[] = [
     question: 'Which attribute specifies the MIME type of the linked document?',
     options: ['type', 'mime', 'format', 'content-type'],
     correctAnswer: 'type',
-    explanation: 'The type attribute specifies the MIME type of the linked document.'
+    explanation:
+      'The type attribute specifies the MIME type of the linked document.',
   },
   {
     id: 'attr-18',
@@ -467,7 +527,8 @@ export const quizQuestions: Question[] = [
     question: 'Which attribute makes an element draggable in HTML5?',
     options: ['draggable', 'drag', 'movable', 'move'],
     correctAnswer: 'draggable',
-    explanation: 'The draggable attribute specifies whether an element is draggable or not.'
+    explanation:
+      'The draggable attribute specifies whether an element is draggable or not.',
   },
   {
     id: 'attr-19',
@@ -477,7 +538,8 @@ export const quizQuestions: Question[] = [
     question: 'Which attribute specifies the content to be editable by users?',
     options: ['contenteditable', 'editable', 'edit', 'modify'],
     correctAnswer: 'contenteditable',
-    explanation: 'The contenteditable attribute specifies whether the content of an element is editable.'
+    explanation:
+      'The contenteditable attribute specifies whether the content of an element is editable.',
   },
   {
     id: 'attr-20',
@@ -487,57 +549,68 @@ export const quizQuestions: Question[] = [
     question: 'Which attribute specifies the tab order of an element?',
     options: ['tabindex', 'tab', 'order', 'index'],
     correctAnswer: 'tabindex',
-    explanation: 'The tabindex attribute specifies the tab order of an element.'
+    explanation:
+      'The tabindex attribute specifies the tab order of an element.',
   },
   {
     id: 'attr-21',
     category: 'attributes',
     type: 'single-choice',
     difficulty: 'easy',
-    question: 'Which attribute provides additional information about an element (tooltip)?',
+    question:
+      'Which attribute provides additional information about an element (tooltip)?',
     options: ['title', 'tooltip', 'info', 'description'],
     correctAnswer: 'title',
-    explanation: 'The title attribute provides additional information about an element, often shown as a tooltip.'
+    explanation:
+      'The title attribute provides additional information about an element, often shown as a tooltip.',
   },
   {
     id: 'attr-22',
     category: 'attributes',
     type: 'single-choice',
     difficulty: 'hard',
-    question: 'Which attribute is used to specify a keyboard shortcut for an element?',
+    question:
+      'Which attribute is used to specify a keyboard shortcut for an element?',
     options: ['accesskey', 'shortcut', 'key', 'hotkey'],
     correctAnswer: 'accesskey',
-    explanation: 'The accesskey attribute specifies a keyboard shortcut to activate/focus an element.'
+    explanation:
+      'The accesskey attribute specifies a keyboard shortcut to activate/focus an element.',
   },
   {
     id: 'attr-23',
     category: 'attributes',
     type: 'single-choice',
     difficulty: 'medium',
-    question: 'Which attribute is used to specify that a video should start playing automatically?',
+    question:
+      'Which attribute is used to specify that a video should start playing automatically?',
     options: ['autoplay', 'auto', 'play', 'start'],
     correctAnswer: 'autoplay',
-    explanation: 'The autoplay attribute specifies that the audio/video will start playing automatically.'
+    explanation:
+      'The autoplay attribute specifies that the audio/video will start playing automatically.',
   },
   {
     id: 'attr-24',
     category: 'attributes',
     type: 'single-choice',
     difficulty: 'easy',
-    question: 'Which attribute specifies that video controls should be displayed?',
+    question:
+      'Which attribute specifies that video controls should be displayed?',
     options: ['controls', 'show-controls', 'display', 'interface'],
     correctAnswer: 'controls',
-    explanation: 'The controls attribute specifies that audio/video controls should be displayed.'
+    explanation:
+      'The controls attribute specifies that audio/video controls should be displayed.',
   },
   {
     id: 'attr-25',
     category: 'attributes',
     type: 'single-choice',
     difficulty: 'medium',
-    question: 'Which attribute is used to specify the relationship between the current document and linked document?',
+    question:
+      'Which attribute is used to specify the relationship between the current document and linked document?',
     options: ['rel', 'relationship', 'link', 'connection'],
     correctAnswer: 'rel',
-    explanation: 'The rel attribute specifies the relationship between the current document and the linked document.'
+    explanation:
+      'The rel attribute specifies the relationship between the current document and the linked document.',
   },
 
   // 25 Complete the Code Questions
@@ -549,7 +622,7 @@ export const quizQuestions: Question[] = [
     question: 'Complete the HTML code to create a basic paragraph:',
     code: '___Your text here___',
     correctAnswer: '<p>Your text here</p>',
-    explanation: 'Paragraphs are created using <p> tags.'
+    explanation: 'Paragraphs are created using <p> tags.',
   },
   {
     id: 'code-2',
@@ -559,17 +632,20 @@ export const quizQuestions: Question[] = [
     question: 'Complete the code to create a link that opens in a new tab:',
     code: '<a ___ target="___">Click here</a>',
     correctAnswer: '<a href="#" target="_blank">Click here</a>',
-    explanation: 'Use href for the URL and target="_blank" to open in a new tab.'
+    explanation:
+      'Use href for the URL and target="_blank" to open in a new tab.',
   },
   {
     id: 'code-3',
     category: 'complete-code',
     type: 'code-completion',
     difficulty: 'medium',
-    question: 'Complete the code to create an email input field with placeholder:',
+    question:
+      'Complete the code to create an email input field with placeholder:',
     code: '<input type="___" placeholder="___" />',
     correctAnswer: '<input type="email" placeholder="Enter your email" />',
-    explanation: 'Use type="email" for email validation and placeholder for hint text.'
+    explanation:
+      'Use type="email" for email validation and placeholder for hint text.',
   },
   {
     id: 'code-4',
@@ -579,7 +655,8 @@ export const quizQuestions: Question[] = [
     question: 'Complete the code to display an image with alt text:',
     code: '<___ src="image.jpg" ___="Description" />',
     correctAnswer: '<img src="image.jpg" alt="Description" />',
-    explanation: 'Use <img> tag with src for image source and alt for alternative text.'
+    explanation:
+      'Use <img> tag with src for image source and alt for alternative text.',
   },
   {
     id: 'code-5',
@@ -588,8 +665,9 @@ export const quizQuestions: Question[] = [
     difficulty: 'medium',
     question: 'Complete the code to create an ordered list with three items:',
     code: '___\n  <li>First</li>\n  ___Second___\n  <li>Third</li>\n___',
-    correctAnswer: '<ol>\n  <li>First</li>\n  <li>Second</li>\n  <li>Third</li>\n</ol>',
-    explanation: 'Use <ol> for ordered list and <li> for list items.'
+    correctAnswer:
+      '<ol>\n  <li>First</li>\n  <li>Second</li>\n  <li>Third</li>\n</ol>',
+    explanation: 'Use <ol> for ordered list and <li> for list items.',
   },
   {
     id: 'code-6',
@@ -598,8 +676,10 @@ export const quizQuestions: Question[] = [
     difficulty: 'hard',
     question: 'Complete the code to create a form with method POST:',
     code: '<___ action="/submit" ___="POST">\n  <input type="submit" />\n</___>',
-    correctAnswer: '<form action="/submit" method="POST">\n  <input type="submit" />\n</form>',
-    explanation: 'Use <form> tag with action for URL and method for HTTP method.'
+    correctAnswer:
+      '<form action="/submit" method="POST">\n  <input type="submit" />\n</form>',
+    explanation:
+      'Use <form> tag with action for URL and method for HTTP method.',
   },
   {
     id: 'code-7',
@@ -608,8 +688,9 @@ export const quizQuestions: Question[] = [
     difficulty: 'medium',
     question: 'Complete the code to create a table header row:',
     code: '<table>\n  ___\n    ___Name___\n    <th>Age</th>\n  ___\n</table>',
-    correctAnswer: '<table>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n</table>',
-    explanation: 'Use <tr> for table row and <th> for table headers.'
+    correctAnswer:
+      '<table>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n</table>',
+    explanation: 'Use <tr> for table row and <th> for table headers.',
   },
   {
     id: 'code-8',
@@ -619,7 +700,7 @@ export const quizQuestions: Question[] = [
     question: 'Complete the code to make text bold:',
     code: '___Important text___',
     correctAnswer: '<strong>Important text</strong>',
-    explanation: 'Use <strong> tag for semantically important bold text.'
+    explanation: 'Use <strong> tag for semantically important bold text.',
   },
   {
     id: 'code-9',
@@ -628,8 +709,10 @@ export const quizQuestions: Question[] = [
     difficulty: 'hard',
     question: 'Complete the code to create a select dropdown with options:',
     code: '___\n  <option ___="1">Option 1</option>\n  <option value="2">Option 2</option>\n___',
-    correctAnswer: '<select>\n  <option value="1">Option 1</option>\n  <option value="2">Option 2</option>\n</select>',
-    explanation: 'Use <select> for dropdown and <option> with value attribute for choices.'
+    correctAnswer:
+      '<select>\n  <option value="1">Option 1</option>\n  <option value="2">Option 2</option>\n</select>',
+    explanation:
+      'Use <select> for dropdown and <option> with value attribute for choices.',
   },
   {
     id: 'code-10',
@@ -638,8 +721,10 @@ export const quizQuestions: Question[] = [
     difficulty: 'medium',
     question: 'Complete the code to create a text input with a label:',
     code: '<___ for="name">Name:<___>\n<input type="text" ___="name" />',
-    correctAnswer: '<label for="name">Name:</label>\n<input type="text" id="name" />',
-    explanation: 'Use <label> with for attribute matching input id for accessibility.'
+    correctAnswer:
+      '<label for="name">Name:</label>\n<input type="text" id="name" />',
+    explanation:
+      'Use <label> with for attribute matching input id for accessibility.',
   },
   {
     id: 'code-11',
@@ -649,7 +734,7 @@ export const quizQuestions: Question[] = [
     question: 'Complete the code to create a horizontal rule:',
     code: '___',
     correctAnswer: '<hr>',
-    explanation: 'Use <hr> tag to create a horizontal rule (line).'
+    explanation: 'Use <hr> tag to create a horizontal rule (line).',
   },
   {
     id: 'code-12',
@@ -658,8 +743,10 @@ export const quizQuestions: Question[] = [
     difficulty: 'hard',
     question: 'Complete the code to embed a video with controls:',
     code: '<___ src="video.mp4" ___>\n  Your browser does not support video.\n</___>',
-    correctAnswer: '<video src="video.mp4" controls>\n  Your browser does not support video.\n</video>',
-    explanation: 'Use <video> tag with controls attribute for playback controls.'
+    correctAnswer:
+      '<video src="video.mp4" controls>\n  Your browser does not support video.\n</video>',
+    explanation:
+      'Use <video> tag with controls attribute for playback controls.',
   },
   {
     id: 'code-13',
@@ -669,7 +756,8 @@ export const quizQuestions: Question[] = [
     question: 'Complete the code to create a button with onclick event:',
     code: '<___ ___="alert(\'Hello!\')">Click me</___>',
     correctAnswer: '<button onclick="alert(\'Hello!\')">Click me</button>',
-    explanation: 'Use <button> tag with onclick attribute for JavaScript events.'
+    explanation:
+      'Use <button> tag with onclick attribute for JavaScript events.',
   },
   {
     id: 'code-14',
@@ -679,7 +767,7 @@ export const quizQuestions: Question[] = [
     question: 'Complete the code to create a blockquote:',
     code: '___This is a quote___',
     correctAnswer: '<blockquote>This is a quote</blockquote>',
-    explanation: 'Use <blockquote> tag for quotations from another source.'
+    explanation: 'Use <blockquote> tag for quotations from another source.',
   },
   {
     id: 'code-15',
@@ -688,8 +776,10 @@ export const quizQuestions: Question[] = [
     difficulty: 'hard',
     question: 'Complete the code to create a definition list:',
     code: '___\n  ___HTML___\n  ___Hypertext Markup Language___\n</dl>',
-    correctAnswer: '<dl>\n  <dt>HTML</dt>\n  <dd>Hypertext Markup Language</dd>\n</dl>',
-    explanation: 'Use <dl> for definition list, <dt> for term, <dd> for description.'
+    correctAnswer:
+      '<dl>\n  <dt>HTML</dt>\n  <dd>Hypertext Markup Language</dd>\n</dl>',
+    explanation:
+      'Use <dl> for definition list, <dt> for term, <dd> for description.',
   },
   {
     id: 'code-16',
@@ -698,8 +788,10 @@ export const quizQuestions: Question[] = [
     difficulty: 'medium',
     question: 'Complete the code to create a fieldset with legend:',
     code: '___\n  ___Personal Info___\n  <input type="text" />\n</___>',
-    correctAnswer: '<fieldset>\n  <legend>Personal Info</legend>\n  <input type="text" />\n</fieldset>',
-    explanation: 'Use <fieldset> to group form elements and <legend> for the caption.'
+    correctAnswer:
+      '<fieldset>\n  <legend>Personal Info</legend>\n  <input type="text" />\n</fieldset>',
+    explanation:
+      'Use <fieldset> to group form elements and <legend> for the caption.',
   },
   {
     id: 'code-17',
@@ -709,7 +801,7 @@ export const quizQuestions: Question[] = [
     question: 'Complete the code to add a comment in HTML:',
     code: '___ This is a comment ___',
     correctAnswer: '<!-- This is a comment -->',
-    explanation: 'HTML comments are written between <!-- and -->.'
+    explanation: 'HTML comments are written between <!-- and -->.',
   },
   {
     id: 'code-18',
@@ -719,7 +811,7 @@ export const quizQuestions: Question[] = [
     question: 'Complete the code to create a progress bar at 70%:',
     code: '<___ value="___" max="100"></___>',
     correctAnswer: '<progress value="70" max="100"></progress>',
-    explanation: 'Use <progress> tag with value and max attributes.'
+    explanation: 'Use <progress> tag with value and max attributes.',
   },
   {
     id: 'code-19',
@@ -729,7 +821,8 @@ export const quizQuestions: Question[] = [
     question: 'Complete the code to create a text area with 5 rows:',
     code: '<___ ___="5" cols="30"></___>',
     correctAnswer: '<textarea rows="5" cols="30"></textarea>',
-    explanation: 'Use <textarea> tag with rows and cols attributes for dimensions.'
+    explanation:
+      'Use <textarea> tag with rows and cols attributes for dimensions.',
   },
   {
     id: 'code-20',
@@ -739,7 +832,7 @@ export const quizQuestions: Question[] = [
     question: 'Complete the code to create a line break:',
     code: 'First line___ Second line',
     correctAnswer: 'First line<br> Second line',
-    explanation: 'Use <br> tag for line breaks.'
+    explanation: 'Use <br> tag for line breaks.',
   },
   {
     id: 'code-21',
@@ -749,7 +842,7 @@ export const quizQuestions: Question[] = [
     question: 'Complete the code for a color input with default value:',
     code: '<input type="___" ___="#ff0000" />',
     correctAnswer: '<input type="color" value="#ff0000" />',
-    explanation: 'Use type="color" for color picker with value in hex format.'
+    explanation: 'Use type="color" for color picker with value in hex format.',
   },
   {
     id: 'code-22',
@@ -758,8 +851,10 @@ export const quizQuestions: Question[] = [
     difficulty: 'medium',
     question: 'Complete the code to create a details element with summary:',
     code: '___\n  ___Click to expand___\n  <p>Hidden content</p>\n</___>',
-    correctAnswer: '<details>\n  <summary>Click to expand</summary>\n  <p>Hidden content</p>\n</details>',
-    explanation: 'Use <details> for expandable content with <summary> as the visible heading.'
+    correctAnswer:
+      '<details>\n  <summary>Click to expand</summary>\n  <p>Hidden content</p>\n</details>',
+    explanation:
+      'Use <details> for expandable content with <summary> as the visible heading.',
   },
   {
     id: 'code-23',
@@ -769,7 +864,7 @@ export const quizQuestions: Question[] = [
     question: 'Complete the code to create an abbreviation:',
     code: '<___ title="World Wide Web">WWW</___>',
     correctAnswer: '<abbr title="World Wide Web">WWW</abbr>',
-    explanation: 'Use <abbr> tag with title attribute for abbreviations.'
+    explanation: 'Use <abbr> tag with title attribute for abbreviations.',
   },
   {
     id: 'code-24',
@@ -779,7 +874,7 @@ export const quizQuestions: Question[] = [
     question: 'Complete the code to create a meter element:',
     code: '<___ value="6" min="0" ___="10">6 out of 10</___>',
     correctAnswer: '<meter value="6" min="0" max="10">6 out of 10</meter>',
-    explanation: 'Use <meter> tag with value, min, and max attributes.'
+    explanation: 'Use <meter> tag with value, min, and max attributes.',
   },
   {
     id: 'code-25',
@@ -789,7 +884,7 @@ export const quizQuestions: Question[] = [
     question: 'Complete the code for an iframe with specific dimensions:',
     code: '<___ src="page.html" ___="400" height="300"></___>',
     correctAnswer: '<iframe src="page.html" width="400" height="300"></iframe>',
-    explanation: 'Use <iframe> tag with src, width, and height attributes.'
+    explanation: 'Use <iframe> tag with src, width, and height attributes.',
   },
 
   // 10 Easy Practical Questions
@@ -798,7 +893,8 @@ export const quizQuestions: Question[] = [
     category: 'practical-easy',
     type: 'practical',
     difficulty: 'easy',
-    question: 'Create a simple "Hello World" webpage with proper HTML structure including doctype, html, head with title, and body.',
+    question:
+      'Create a simple "Hello World" webpage with proper HTML structure including doctype, html, head with title, and body.',
     correctAnswer: `<!DOCTYPE html>
 <html>
 <head>
@@ -808,14 +904,16 @@ export const quizQuestions: Question[] = [
   <h1>Hello World</h1>
 </body>
 </html>`,
-    explanation: 'A basic HTML page needs DOCTYPE, html, head with title, and body elements.'
+    explanation:
+      'A basic HTML page needs DOCTYPE, html, head with title, and body elements.',
   },
   {
     id: 'prac-easy-2',
     category: 'practical-easy',
     type: 'practical',
     difficulty: 'easy',
-    question: 'Create a navigation menu with three links: Home, About, and Contact.',
+    question:
+      'Create a navigation menu with three links: Home, About, and Contact.',
     correctAnswer: `<nav>
   <ul>
     <li><a href="/">Home</a></li>
@@ -823,14 +921,16 @@ export const quizQuestions: Question[] = [
     <li><a href="/contact">Contact</a></li>
   </ul>
 </nav>`,
-    explanation: 'Navigation menus use <nav> element with lists and links for semantic structure.'
+    explanation:
+      'Navigation menus use <nav> element with lists and links for semantic structure.',
   },
   {
     id: 'prac-easy-3',
     category: 'practical-easy',
     type: 'practical',
     difficulty: 'easy',
-    question: 'Create a simple contact form with name, email, and message fields.',
+    question:
+      'Create a simple contact form with name, email, and message fields.',
     correctAnswer: `<form>
   <label for="name">Name:</label>
   <input type="text" id="name" name="name" required>
@@ -843,7 +943,8 @@ export const quizQuestions: Question[] = [
   
   <button type="submit">Submit</button>
 </form>`,
-    explanation: 'Forms should have proper labels, input types, and required attributes for validation.'
+    explanation:
+      'Forms should have proper labels, input types, and required attributes for validation.',
   },
   {
     id: 'prac-easy-4',
@@ -856,14 +957,16 @@ export const quizQuestions: Question[] = [
   <img src="image2.jpg" alt="Image 2">
   <img src="image3.jpg" alt="Image 3">
 </div>`,
-    explanation: 'Image galleries need proper alt text for accessibility and can be wrapped in a container.'
+    explanation:
+      'Image galleries need proper alt text for accessibility and can be wrapped in a container.',
   },
   {
     id: 'prac-easy-5',
     category: 'practical-easy',
     type: 'practical',
     difficulty: 'easy',
-    question: 'Create a simple table with headers for Name, Age, and City with two data rows.',
+    question:
+      'Create a simple table with headers for Name, Age, and City with two data rows.',
     correctAnswer: `<table>
   <thead>
     <tr>
@@ -885,14 +988,16 @@ export const quizQuestions: Question[] = [
     </tr>
   </tbody>
 </table>`,
-    explanation: 'Tables should use thead, tbody, th for headers, and td for data cells.'
+    explanation:
+      'Tables should use thead, tbody, th for headers, and td for data cells.',
   },
   {
     id: 'prac-easy-6',
     category: 'practical-easy',
     type: 'practical',
     difficulty: 'easy',
-    question: 'Create a footer with copyright information and social media links.',
+    question:
+      'Create a footer with copyright information and social media links.',
     correctAnswer: `<footer>
   <p>&copy; 2024 My Website. All rights reserved.</p>
   <div class="social-links">
@@ -901,7 +1006,8 @@ export const quizQuestions: Question[] = [
     <a href="#">Instagram</a>
   </div>
 </footer>`,
-    explanation: 'Footers typically contain copyright info and links, using semantic <footer> element.'
+    explanation:
+      'Footers typically contain copyright info and links, using semantic <footer> element.',
   },
   {
     id: 'prac-easy-7',
@@ -918,14 +1024,16 @@ export const quizQuestions: Question[] = [
   
   <button type="submit">Login</button>
 </form>`,
-    explanation: 'Login forms should use type="password" for password fields to hide input.'
+    explanation:
+      'Login forms should use type="password" for password fields to hide input.',
   },
   {
     id: 'prac-easy-8',
     category: 'practical-easy',
     type: 'practical',
     difficulty: 'easy',
-    question: 'Create a blog post structure with title, date, author, and content.',
+    question:
+      'Create a blog post structure with title, date, author, and content.',
     correctAnswer: `<article>
   <header>
     <h1>Blog Post Title</h1>
@@ -938,7 +1046,8 @@ export const quizQuestions: Question[] = [
     <p>Blog post content goes here...</p>
   </div>
 </article>`,
-    explanation: 'Blog posts should use <article> for semantic structure with header and content sections.'
+    explanation:
+      'Blog posts should use <article> for semantic structure with header and content sections.',
   },
   {
     id: 'prac-easy-9',
@@ -952,7 +1061,8 @@ export const quizQuestions: Question[] = [
   <input type="email" id="email" name="email" placeholder="Enter your email" required>
   <button type="submit">Subscribe</button>
 </form>`,
-    explanation: 'Newsletter forms should use type="email" for proper validation and placeholder text.'
+    explanation:
+      'Newsletter forms should use type="email" for proper validation and placeholder text.',
   },
   {
     id: 'prac-easy-10',
@@ -971,7 +1081,8 @@ export const quizQuestions: Question[] = [
     <p>Start with basic tags and practice building simple webpages.</p>
   </details>
 </section>`,
-    explanation: 'FAQ sections can use <details> and <summary> for collapsible content without JavaScript.'
+    explanation:
+      'FAQ sections can use <details> and <summary> for collapsible content without JavaScript.',
   },
 
   // 10 Medium Practical Questions
@@ -980,7 +1091,8 @@ export const quizQuestions: Question[] = [
     category: 'practical-medium',
     type: 'practical',
     difficulty: 'medium',
-    question: 'Create a responsive card component with image, title, description, and a button.',
+    question:
+      'Create a responsive card component with image, title, description, and a button.',
     correctAnswer: `<div class="card">
   <img src="card-image.jpg" alt="Card image">
   <div class="card-body">
@@ -989,14 +1101,16 @@ export const quizQuestions: Question[] = [
     <a href="#" class="btn">Learn More</a>
   </div>
 </div>`,
-    explanation: 'Card components typically have an image, content area with title, description, and actions.'
+    explanation:
+      'Card components typically have an image, content area with title, description, and actions.',
   },
   {
     id: 'prac-medium-2',
     category: 'practical-medium',
     type: 'practical',
     difficulty: 'medium',
-    question: 'Create a product listing with image, name, price, rating, and add to cart button.',
+    question:
+      'Create a product listing with image, name, price, rating, and add to cart button.',
     correctAnswer: `<div class="product">
   <img src="product.jpg" alt="Product name">
   <h3>Product Name</h3>
@@ -1007,14 +1121,16 @@ export const quizQuestions: Question[] = [
   <p class="price">$29.99</p>
   <button type="button">Add to Cart</button>
 </div>`,
-    explanation: 'Product cards need structured information including visuals, pricing, and actions.'
+    explanation:
+      'Product cards need structured information including visuals, pricing, and actions.',
   },
   {
     id: 'prac-medium-3',
     category: 'practical-medium',
     type: 'practical',
     difficulty: 'medium',
-    question: 'Create a comment section with user avatar, name, date, and comment text.',
+    question:
+      'Create a comment section with user avatar, name, date, and comment text.',
     correctAnswer: `<div class="comment">
   <img src="avatar.jpg" alt="User avatar" class="avatar">
   <div class="comment-content">
@@ -1026,14 +1142,16 @@ export const quizQuestions: Question[] = [
     <button>Reply</button>
   </div>
 </div>`,
-    explanation: 'Comment sections need user info, timestamp, content, and interaction options.'
+    explanation:
+      'Comment sections need user info, timestamp, content, and interaction options.',
   },
   {
     id: 'prac-medium-4',
     category: 'practical-medium',
     type: 'practical',
     difficulty: 'medium',
-    question: 'Create a pricing table with three plans showing features and prices.',
+    question:
+      'Create a pricing table with three plans showing features and prices.',
     correctAnswer: `<div class="pricing-table">
   <div class="plan">
     <h3>Basic</h3>
@@ -1065,14 +1183,16 @@ export const quizQuestions: Question[] = [
     <button>Choose Plan</button>
   </div>
 </div>`,
-    explanation: 'Pricing tables compare different plans with features and call-to-action buttons.'
+    explanation:
+      'Pricing tables compare different plans with features and call-to-action buttons.',
   },
   {
     id: 'prac-medium-5',
     category: 'practical-medium',
     type: 'practical',
     difficulty: 'medium',
-    question: 'Create a testimonial section with quote, author name, and company.',
+    question:
+      'Create a testimonial section with quote, author name, and company.',
     correctAnswer: `<section class="testimonial">
   <blockquote>
     <p>"This product has transformed our business. Highly recommended!"</p>
@@ -1084,7 +1204,8 @@ export const quizQuestions: Question[] = [
     </footer>
   </blockquote>
 </section>`,
-    explanation: 'Testimonials use blockquote with proper citation including author and credentials.'
+    explanation:
+      'Testimonials use blockquote with proper citation including author and credentials.',
   },
   {
     id: 'prac-medium-6',
@@ -1106,7 +1227,8 @@ export const quizQuestions: Question[] = [
   </select>
   <button type="submit">Search</button>
 </form>`,
-    explanation: 'Search forms often include filters and sorting options using select elements.'
+    explanation:
+      'Search forms often include filters and sorting options using select elements.',
   },
   {
     id: 'prac-medium-7',
@@ -1131,14 +1253,16 @@ export const quizQuestions: Question[] = [
     <p>Expanded operations to 10 countries.</p>
   </div>
 </div>`,
-    explanation: 'Timelines show chronological events with dates and descriptions.'
+    explanation:
+      'Timelines show chronological events with dates and descriptions.',
   },
   {
     id: 'prac-medium-8',
     category: 'practical-medium',
     type: 'practical',
     difficulty: 'medium',
-    question: 'Create a user profile card with avatar, bio, stats, and social links.',
+    question:
+      'Create a user profile card with avatar, bio, stats, and social links.',
     correctAnswer: `<div class="profile-card">
   <img src="avatar.jpg" alt="User Name" class="avatar">
   <h2>John Doe</h2>
@@ -1163,14 +1287,16 @@ export const quizQuestions: Question[] = [
     <a href="#">GitHub</a>
   </div>
 </div>`,
-    explanation: 'Profile cards display user information, statistics, and social connections.'
+    explanation:
+      'Profile cards display user information, statistics, and social connections.',
   },
   {
     id: 'prac-medium-9',
     category: 'practical-medium',
     type: 'practical',
     difficulty: 'medium',
-    question: 'Create a checkout form with billing and shipping address sections.',
+    question:
+      'Create a checkout form with billing and shipping address sections.',
     correctAnswer: `<form class="checkout">
   <section>
     <h2>Billing Address</h2>
@@ -1202,14 +1328,16 @@ export const quizQuestions: Question[] = [
   
   <button type="submit">Place Order</button>
 </form>`,
-    explanation: 'Checkout forms need separate sections for billing and shipping with proper field grouping.'
+    explanation:
+      'Checkout forms need separate sections for billing and shipping with proper field grouping.',
   },
   {
     id: 'prac-medium-10',
     category: 'practical-medium',
     type: 'practical',
     difficulty: 'medium',
-    question: 'Create a media player interface with video element and custom controls.',
+    question:
+      'Create a media player interface with video element and custom controls.',
     correctAnswer: `<div class="video-player">
   <video id="video" width="640" height="360">
     <source src="video.mp4" type="video/mp4">
@@ -1224,7 +1352,8 @@ export const quizQuestions: Question[] = [
     <button id="fullscreen">Fullscreen</button>
   </div>
 </div>`,
-    explanation: 'Media players need video element with multiple sources and custom control interface.'
+    explanation:
+      'Media players need video element with multiple sources and custom control interface.',
   },
 
   // 5 Hard Real-time Practical Questions
@@ -1233,7 +1362,8 @@ export const quizQuestions: Question[] = [
     category: 'practical-hard',
     type: 'practical',
     difficulty: 'hard',
-    question: 'Create a complete e-commerce product page with image carousel, product details, size/color selection, reviews section, and related products.',
+    question:
+      'Create a complete e-commerce product page with image carousel, product details, size/color selection, reviews section, and related products.',
     correctAnswer: `<main class="product-page">
   <div class="product-images">
     <div class="carousel">
@@ -1331,14 +1461,16 @@ export const quizQuestions: Question[] = [
     </div>
   </section>
 </main>`,
-    explanation: 'A complete e-commerce product page needs image gallery, product options, reviews, and related products sections.'
+    explanation:
+      'A complete e-commerce product page needs image gallery, product options, reviews, and related products sections.',
   },
   {
     id: 'prac-hard-2',
     category: 'practical-hard',
     type: 'practical',
     difficulty: 'hard',
-    question: 'Create a complete dashboard layout with sidebar navigation, header with user menu, main content area with statistics cards, charts placeholder, and recent activity table.',
+    question:
+      'Create a complete dashboard layout with sidebar navigation, header with user menu, main content area with statistics cards, charts placeholder, and recent activity table.',
     correctAnswer: `<div class="dashboard">
   <aside class="sidebar">
     <div class="logo">
@@ -1442,14 +1574,16 @@ export const quizQuestions: Question[] = [
     </section>
   </main>
 </div>`,
-    explanation: 'A dashboard needs sidebar navigation, header with user controls, statistics cards, charts area, and activity tables.'
+    explanation:
+      'A dashboard needs sidebar navigation, header with user controls, statistics cards, charts area, and activity tables.',
   },
   {
     id: 'prac-hard-3',
     category: 'practical-hard',
     type: 'practical',
     difficulty: 'hard',
-    question: 'Create a complete blog homepage with header, featured article, recent posts grid, sidebar with categories and popular posts, newsletter signup, and footer.',
+    question:
+      'Create a complete blog homepage with header, featured article, recent posts grid, sidebar with categories and popular posts, newsletter signup, and footer.',
     correctAnswer: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1597,14 +1731,16 @@ export const quizQuestions: Question[] = [
   </footer>
 </body>
 </html>`,
-    explanation: 'A blog homepage needs featured content, recent posts, sidebar widgets, newsletter signup, and comprehensive footer.'
+    explanation:
+      'A blog homepage needs featured content, recent posts, sidebar widgets, newsletter signup, and comprehensive footer.',
   },
   {
     id: 'prac-hard-4',
     category: 'practical-hard',
     type: 'practical',
     difficulty: 'hard',
-    question: 'Create a complete multi-step registration form with personal info, account details, preferences, and confirmation steps with progress indicator.',
+    question:
+      'Create a complete multi-step registration form with personal info, account details, preferences, and confirmation steps with progress indicator.',
     correctAnswer: `<div class="registration-form">
   <div class="progress-indicator">
     <div class="step active">
@@ -1799,14 +1935,16 @@ export const quizQuestions: Question[] = [
     </fieldset>
   </form>
 </div>`,
-    explanation: 'Multi-step forms need progress indicators, fieldsets for each step, validation, and a review/confirmation step.'
+    explanation:
+      'Multi-step forms need progress indicators, fieldsets for each step, validation, and a review/confirmation step.',
   },
   {
     id: 'prac-hard-5',
     category: 'practical-hard',
     type: 'practical',
     difficulty: 'hard',
-    question: 'Create a complete restaurant website homepage with navigation, hero section with reservation form, menu preview, chef section, testimonials, and contact information with embedded map.',
+    question:
+      'Create a complete restaurant website homepage with navigation, hero section with reservation form, menu preview, chef section, testimonials, and contact information with embedded map.',
     correctAnswer: `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2047,6 +2185,7 @@ export const quizQuestions: Question[] = [
   </footer>
 </body>
 </html>`,
-    explanation: 'A restaurant website needs hero with reservation, menu preview, chef section, testimonials, location/hours, and contact information.'
-  }
+    explanation:
+      'A restaurant website needs hero with reservation, menu preview, chef section, testimonials, location/hours, and contact information.',
+  },
 ];

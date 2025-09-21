@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaCheckCircle, FaCode } from 'react-icons/fa';
+
 import { Breadcrumb } from '@/components/Breadcrumb';
 
 interface LessonViewProps {
@@ -10,7 +11,7 @@ interface LessonViewProps {
 export const LessonView = ({ lessonId, onBack }: LessonViewProps) => {
   // Mock lesson content based on ID
   const getLessonContent = () => {
-    switch(lessonId) {
+    switch (lessonId) {
       case '1':
         return {
           title: 'HTML Basics',
@@ -33,7 +34,7 @@ export const LessonView = ({ lessonId, onBack }: LessonViewProps) => {
     <h1>Hello World!</h1>
     <p>This is my first webpage.</p>
   </body>
-</html>`
+</html>`,
         };
       case '2':
         return {
@@ -51,13 +52,13 @@ export const LessonView = ({ lessonId, onBack }: LessonViewProps) => {
           `,
           code: `<h1>Main Heading</h1>
 <h2>Subheading</h2>
-<p>This is a paragraph with <strong>bold</strong> and <em>italic</em> text.</p>`
+<p>This is a paragraph with <strong>bold</strong> and <em>italic</em> text.</p>`,
         };
       default:
         return {
           title: 'Lesson',
           content: '<p>Lesson content coming soon...</p>',
-          code: '<!-- Code examples will appear here -->'
+          code: '<!-- Code examples will appear here -->',
         };
     }
   };
@@ -65,29 +66,29 @@ export const LessonView = ({ lessonId, onBack }: LessonViewProps) => {
   const lesson = getLessonContent();
 
   return (
-    <div className="relative">
+    <div className='relative'>
       {/* Header */}
-      <header className="border-b border-gray-800 bg-gray-950/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="w-full max-w-7xl mx-auto px-6 py-4">
-          <h1 className="text-2xl font-bold text-white mb-2">{lesson.title}</h1>
+      <header className='border-b border-gray-800 bg-gray-950/80 backdrop-blur-sm sticky top-0 z-50'>
+        <div className='w-full max-w-7xl mx-auto px-6 py-4'>
+          <h1 className='text-2xl font-bold text-white mb-2'>{lesson.title}</h1>
           <Breadcrumb />
         </div>
       </header>
 
-      <div className="w-full max-w-7xl mx-auto px-6 py-10">
-        <div className="grid lg:grid-cols-2 gap-8">
+      <div className='w-full max-w-7xl mx-auto px-6 py-10'>
+        <div className='grid lg:grid-cols-2 gap-8'>
           {/* Content Section */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800"
+            className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800'
           >
-            <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-              <FaCode className="text-cyan-400" />
+            <h2 className='text-2xl font-bold text-white mb-4 flex items-center gap-2'>
+              <FaCode className='text-cyan-400' />
               Lesson Content
             </h2>
-            <div 
-              className="prose prose-invert max-w-none"
+            <div
+              className='prose prose-invert max-w-none'
               dangerouslySetInnerHTML={{ __html: lesson.content }}
             />
           </motion.div>
@@ -96,18 +97,18 @@ export const LessonView = ({ lessonId, onBack }: LessonViewProps) => {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800"
+            className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800'
           >
-            <h2 className="text-2xl font-bold text-white mb-4">Code Example</h2>
-            <div className="bg-black rounded-lg p-4 overflow-x-auto">
-              <pre className="text-green-400 font-mono text-sm">
+            <h2 className='text-2xl font-bold text-white mb-4'>Code Example</h2>
+            <div className='bg-black rounded-lg p-4 overflow-x-auto'>
+              <pre className='text-green-400 font-mono text-sm'>
                 <code>{lesson.code}</code>
               </pre>
             </div>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="mt-4 w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg font-semibold flex items-center justify-center gap-2"
+              className='mt-4 w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg font-semibold flex items-center justify-center gap-2'
               onClick={onBack}
             >
               <FaCheckCircle />

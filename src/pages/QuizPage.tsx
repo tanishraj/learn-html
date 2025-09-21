@@ -10,6 +10,7 @@ import {
   Rocket,
   Trophy,
 } from 'lucide-react';
+
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { usePageTitle } from '@/hooks/usePageTitle';
 
@@ -91,7 +92,7 @@ const categories: QuizCategory[] = [
 
 export const QuizPage: React.FC = () => {
   usePageTitle('Quiz');
-  
+
   return (
     <div className='relative'>
       {/* Header */}
@@ -125,10 +126,7 @@ export const QuizPage: React.FC = () => {
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
-              <Link
-                to={category.path}
-                className='block h-full'
-              >
+              <Link to={category.path} className='block h-full'>
                 <div className='h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:border-cyan-500/50 transition-all cursor-pointer'>
                   <div
                     className={`w-14 h-14 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center mb-4 text-white`}
@@ -149,10 +147,10 @@ export const QuizPage: React.FC = () => {
                       {category.id === 'practical-easy'
                         ? 'Easy'
                         : category.id === 'practical-medium'
-                        ? 'Medium'
-                        : category.id === 'practical-hard'
-                        ? 'Hard'
-                        : 'Mixed'}
+                          ? 'Medium'
+                          : category.id === 'practical-hard'
+                            ? 'Hard'
+                            : 'Mixed'}
                     </span>
                   </div>
                 </div>
