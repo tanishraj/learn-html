@@ -4,6 +4,8 @@ import Editor from '@monaco-editor/react';
 import {
   FaCode,
   FaPlay,
+  FaPause,
+  FaSync,
   FaCopy,
   FaUndo,
   FaBook,
@@ -11,7 +13,9 @@ import {
   FaCheckCircle,
 } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+
 import { tagDetails } from '../data/tagDetails';
+
 import { Breadcrumb } from '@/components/Breadcrumb';
 
 interface TagPlaygroundProps {
@@ -28,14 +32,16 @@ const themes = [
 export const TagPlayground = ({ tagName, onBack }: TagPlaygroundProps) => {
   const navigate = useNavigate();
   const tagDetail = tagDetails[tagName] || tagDetails['h1'];
-  
+
   // Get initial code from sessionStorage or use default example
   const getInitialCode = () => {
     const storedCode = sessionStorage.getItem('playgroundCode');
     if (storedCode) {
       sessionStorage.removeItem('playgroundCode'); // Clear after use
+
       return storedCode;
     }
+
     return tagDetail.examples[0]?.code || '';
   };
 
@@ -194,17 +200,17 @@ export const TagPlayground = ({ tagName, onBack }: TagPlaygroundProps) => {
   };
 
   return (
-    <div className="relative">
+    <div className='relative'>
       {/* Header */}
-      <header className="border-b border-gray-800 bg-gray-950/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="w-full px-4 py-3">
-          <div className="flex items-center justify-between">
-            <div className="flex-1">
-              <h1 className="text-xl font-bold flex items-center mb-2">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+      <header className='border-b border-gray-800 bg-gray-950/80 backdrop-blur-sm sticky top-0 z-50'>
+        <div className='w-full px-4 py-3'>
+          <div className='flex items-center justify-between'>
+            <div className='flex-1'>
+              <h1 className='text-xl font-bold flex items-center mb-2'>
+                <span className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400'>
                   &lt;{tagName}&gt;
                 </span>
-                <span className="text-white ml-2">Playground</span>
+                <span className='text-white ml-2'>Playground</span>
               </h1>
               <Breadcrumb />
             </div>
@@ -212,7 +218,7 @@ export const TagPlayground = ({ tagName, onBack }: TagPlaygroundProps) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={goToExplanation}
-              className="flex items-center gap-2 px-4 py-1.5 bg-purple-500/20 text-purple-400 rounded-lg hover:bg-purple-500/30 transition-colors text-sm font-semibold ml-4"
+              className='flex items-center gap-2 px-4 py-1.5 bg-purple-500/20 text-purple-400 rounded-lg hover:bg-purple-500/30 transition-colors text-sm font-semibold ml-4'
             >
               <FaBook />
               Learn More
@@ -222,23 +228,23 @@ export const TagPlayground = ({ tagName, onBack }: TagPlaygroundProps) => {
       </header>
 
       {/* Editor and Preview Container */}
-      <div className="flex flex-col h-[calc(100vh-60px)]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 flex-1">
+      <div className='flex flex-col h-[calc(100vh-93px)]'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 flex-1'>
           {/* Code Editor */}
-          <div className="border-r border-gray-800 flex flex-col">
-            <div className="bg-gray-800 px-4 py-3 flex items-center justify-between border-b border-gray-700">
-              <span className="text-white font-semibold flex items-center gap-2">
-                <FaCode className="text-cyan-400" /> HTML Editor
+          <div className='border-r border-gray-800 flex flex-col'>
+            <div className='min-h-16 bg-gray-800 px-4 py-3 flex items-center justify-between border-b border-gray-700'>
+              <span className='text-white font-semibold flex items-center gap-2'>
+                <FaCode className='text-cyan-400' /> HTML Editor
               </span>
-              <div className="flex items-center gap-2">
+              <div className='flex items-center gap-2'>
                 {/* Theme Selector */}
-                <div className="relative">
+                <div className='relative'>
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setShowThemeMenu(!showThemeMenu)}
-                    className="p-2 rounded hover:bg-gray-700 text-gray-400 hover:text-white transition-colors"
-                    title="Change Theme"
+                    className='p-2 rounded-lg bg-gray-800/50 hover:bg-cyan-500/20 text-gray-400 hover:text-cyan-400 transition-all border border-gray-700 hover:border-cyan-500/50'
+                    title='Change Theme'
                   >
                     <FaPalette />
                   </motion.button>
@@ -246,22 +252,33 @@ export const TagPlayground = ({ tagName, onBack }: TagPlaygroundProps) => {
                     <motion.div
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="absolute top-full right-0 mt-2 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 z-20"
+                      className='absolute top-full right-0 mt-2 bg-gray-900/95 backdrop-blur-sm rounded-lg shadow-xl border border-cyan-500/30 py-2 z-20'
                     >
-                      {themes.map((theme) => (
+                      {themes.map(theme => (
                         <button
                           key={theme.value}
                           onClick={() => {
                             setEditorTheme(theme.value);
                             setShowThemeMenu(false);
                           }}
-                          className="w-full px-4 py-2 text-left text-sm hover:bg-gray-700 transition-colors flex items-center gap-2"
+                          className='w-full px-4 py-2 text-left text-sm hover:bg-cyan-500/20 transition-colors flex items-center gap-2'
                         >
                           <span>{theme.icon}</span>
-                          <span className={editorTheme === theme.value ? 'text-cyan-400' : 'text-gray-300'}>
+                          <span
+                            className={
+                              editorTheme === theme.value
+                                ? 'text-cyan-400'
+                                : 'text-gray-300'
+                            }
+                          >
                             {theme.label}
                           </span>
-                          {editorTheme === theme.value && <FaCheckCircle className="text-cyan-400 ml-auto" size={12} />}
+                          {editorTheme === theme.value && (
+                            <FaCheckCircle
+                              className='text-cyan-400 ml-auto'
+                              size={12}
+                            />
+                          )}
                         </button>
                       ))}
                     </motion.div>
@@ -270,25 +287,39 @@ export const TagPlayground = ({ tagName, onBack }: TagPlaygroundProps) => {
 
                 {/* Auto-run Toggle */}
                 <motion.button
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setAutoRun(!autoRun)}
-                  className={`p-2 rounded transition-colors ${
-                    autoRun 
-                      ? 'bg-green-500/20 text-green-400 hover:bg-green-500/30' 
-                      : 'hover:bg-gray-700 text-gray-400 hover:text-white'
+                  className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 text-sm font-semibold ${
+                    autoRun
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
+                      : 'bg-gray-800/50 text-gray-400 hover:bg-gray-700/50 hover:text-gray-300 border border-gray-700'
                   }`}
-                  title={autoRun ? "Auto-run Enabled" : "Auto-run Disabled"}
+                  title={
+                    autoRun
+                      ? 'Auto-run Enabled (Click to disable)'
+                      : 'Auto-run Disabled (Click to enable)'
+                  }
                 >
-                  <FaPlay />
+                  {autoRun ? (
+                    <>
+                      <FaSync className='animate-spin-slow' size={12} />
+                      <span>Auto</span>
+                    </>
+                  ) : (
+                    <>
+                      <FaPlay size={12} />
+                      <span>Manual</span>
+                    </>
+                  )}
                 </motion.button>
 
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={resetCode}
-                  className="p-2 rounded hover:bg-gray-700 text-gray-400 hover:text-white transition-colors"
-                  title="Reset Code"
+                  className='p-2 rounded-lg bg-gray-800/50 hover:bg-purple-500/20 text-gray-400 hover:text-purple-400 transition-all border border-gray-700 hover:border-purple-500/50'
+                  title='Reset Code'
                 >
                   <FaUndo />
                 </motion.button>
@@ -297,8 +328,8 @@ export const TagPlayground = ({ tagName, onBack }: TagPlaygroundProps) => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={copyCode}
-                  className="p-2 rounded hover:bg-gray-700 text-gray-400 hover:text-white transition-colors"
-                  title="Copy Code"
+                  className='p-2 rounded-lg bg-gray-800/50 hover:bg-blue-500/20 text-gray-400 hover:text-blue-400 transition-all border border-gray-700 hover:border-blue-500/50'
+                  title='Copy Code'
                 >
                   {copied ? '✓' : <FaCopy />}
                 </motion.button>
@@ -308,17 +339,17 @@ export const TagPlayground = ({ tagName, onBack }: TagPlaygroundProps) => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => updatePreview(code)}
-                    className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded text-sm flex items-center gap-1 font-semibold"
+                    className='px-3 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg text-sm flex items-center gap-1.5 font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all'
                   >
-                    <FaPlay size={10} /> Run Code
+                    <FaPlay size={12} /> Run Code
                   </motion.button>
                 )}
               </div>
             </div>
-            <div className="flex-1 relative">
+            <div className='flex-1 relative'>
               <Editor
-                height="100%"
-                defaultLanguage="html"
+                height='100%'
+                defaultLanguage='html'
                 value={code}
                 onChange={handleEditorChange}
                 theme={editorTheme}
@@ -347,36 +378,36 @@ export const TagPlayground = ({ tagName, onBack }: TagPlaygroundProps) => {
           </div>
 
           {/* Preview */}
-          <div className="flex flex-col">
-            <div className="bg-gray-800 px-4 py-3 border-b border-gray-700 flex items-center justify-between">
-              <span className="text-white font-semibold">Output</span>
-              <div className="flex items-center gap-2">
+          <div className='flex flex-col'>
+            <div className='min-h-16 bg-gray-800 px-4 py-3 border-b border-gray-700 flex items-center justify-between'>
+              <span className='text-white font-semibold'>Output</span>
+              <div className='flex items-center gap-2'>
                 {autoRun && (
-                  <span className="text-xs text-green-400 flex items-center gap-1">
-                    <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                  <span className='text-xs text-cyan-400 flex items-center gap-1'>
+                    <span className='w-2 h-2 bg-cyan-400 rounded-full animate-pulse' />
                     Live Preview
                   </span>
                 )}
                 {!autoRun && (
-                  <span className="text-xs text-gray-400">Manual Mode</span>
+                  <span className='text-xs text-gray-400'>Manual Mode</span>
                 )}
               </div>
             </div>
-            <div className="flex-1 bg-white">
+            <div className='flex-1 bg-white'>
               <iframe
                 src={preview}
-                className="w-full h-full"
-                title="Preview"
-                sandbox="allow-scripts"
+                className='w-full h-full'
+                title='Preview'
+                sandbox='allow-scripts'
               />
             </div>
           </div>
         </div>
 
         {/* Examples Bar */}
-        <div className="bg-gray-900/50 backdrop-blur-sm border-t border-gray-800 px-4 py-3">
-          <div className="flex items-center gap-3 overflow-x-auto">
-            <span className="text-gray-400 text-sm font-semibold whitespace-nowrap">
+        <div className='bg-gray-900/50 backdrop-blur-sm border-t border-gray-800 px-4 py-3'>
+          <div className='flex items-center gap-3 overflow-x-auto'>
+            <span className='text-gray-400 text-sm font-semibold whitespace-nowrap'>
               Try Examples:
             </span>
             {tagDetail.examples.map((example, index) => (
@@ -385,7 +416,7 @@ export const TagPlayground = ({ tagName, onBack }: TagPlaygroundProps) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setCode(example.code)}
-                className="px-3 py-1 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded text-sm transition-colors whitespace-nowrap"
+                className='px-3 py-1 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded text-sm transition-colors whitespace-nowrap'
               >
                 {example.title}
               </motion.button>

@@ -122,6 +122,9 @@ export default {
       transitionProperty: {
         DEFAULT: 'all',
       },
+      animation: {
+        'spin-slow': 'spin 2s linear infinite',
+      },
     },
     tailwindPluginKit: {
       styled: true,
