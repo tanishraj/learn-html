@@ -2,12 +2,15 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaGraduationCap, FaBook, FaTrophy, FaCode } from 'react-icons/fa';
 import { Breadcrumb } from '@/components/Breadcrumb';
+import { usePageTitle } from '@/hooks/usePageTitle';
 
 interface DashboardProps {
   onStartLesson?: (lessonId: string) => void;
 }
 
 export const Dashboard = ({ onStartLesson }: DashboardProps) => {
+  usePageTitle('Dashboard');
+  
   const lessons = [
     { id: '1', title: 'HTML Basics', description: 'Learn the fundamentals', icon: '📝', progress: 100 },
     { id: '2', title: 'Text Elements', description: 'Headings, paragraphs, and more', icon: '📄', progress: 75 },

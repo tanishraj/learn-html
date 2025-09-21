@@ -10,8 +10,10 @@ import {
   FaArrowRight,
   FaClipboardCheck,
 } from 'react-icons/fa';
+import { usePageTitle } from '@/hooks/usePageTitle';
 
 export const HomePage = () => {
+  usePageTitle('Home');
   const [floatingElements, setFloatingElements] = useState<
     Array<{ id: number; x: number; y: number; tag: string }>
   >([]);

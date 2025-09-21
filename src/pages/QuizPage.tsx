@@ -11,6 +11,7 @@ import {
   Trophy,
 } from 'lucide-react';
 import { Breadcrumb } from '@/components/Breadcrumb';
+import { usePageTitle } from '@/hooks/usePageTitle';
 
 interface QuizCategory {
   id: string;
@@ -89,6 +90,8 @@ const categories: QuizCategory[] = [
 ];
 
 export const QuizPage: React.FC = () => {
+  usePageTitle('Quiz');
+  
   return (
     <div className='relative'>
       {/* Header */}

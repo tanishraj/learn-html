@@ -6,8 +6,10 @@ import { TagCard } from '../components/TagCard';
 import { htmlTags } from '../data/htmlTags';
 
 import { Breadcrumb } from '@/components/Breadcrumb';
+import { usePageTitle } from '@/hooks/usePageTitle';
 
 export const ExplorePage = () => {
+  usePageTitle('Explore HTML Tags');
   const [filter, setFilter] = useState<
     'all' | 'basic' | 'intermediate' | 'advanced'
   >('all');
