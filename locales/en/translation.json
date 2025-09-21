@@ -1,0 +1,5 @@
+{
+  "welcome": "Welcome Translation",
+  "description": "This is a sample application for i18n in React with TypeScript.",
+  "vite_react": "Vite + React"
+}
